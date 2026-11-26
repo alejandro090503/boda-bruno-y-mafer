@@ -2639,6 +2639,8 @@ body > footer{padding-bottom:120px !important}
 
 /* tarjeta Amazon (reusa .gf-card del destino) */
 .pa-gf-amz{margin-top:28px !important}
+.pa-gf-liv{margin-top:16px !important}
+.pa-gf-sob-t{margin:12px 6px 2px;text-align:center;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;line-height:1.5;color:var(--black,#121212)}
 
 @media (prefers-reduced-motion:reduce){
   .pa-gf-rain{display:none}
@@ -3145,19 +3147,31 @@ body > footer{padding-bottom:120px !important}
 .dc-viewer-close{top:10px;right:10px;z-index:4}
 .dc-viewer-close svg{width:18px;height:18px}
 @media (prefers-reduced-motion:reduce){.dc-look,.dc-look-arrow{animation:none}}
-.pa-dc-sws.pa-dc-one{grid-template-columns:1fr;max-width:120px}
+.pa-dc-sws.pa-dc-one{grid-template-columns:repeat(2,minmax(0,1fr));max-width:260px}
 /* nota del itinerario y padrinos pendientes */
 .tl-lugar{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:19px;line-height:1.5;
   color:var(--olive,#465542);text-align:center;max-width:340px;margin:4px auto 18px}
 .fam-god-pend{text-align:center;margin-top:34px}
 .fam-god-pend .fam-n{font-style:italic;opacity:.85}
+
+/* ═════════ GALERÍA (revelado con máscara + parallax) ═════════ */
+#galeria{position:relative;padding:70px 16px 50px;text-align:center}
+.gal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:520px;margin:30px auto 0;align-items:start}
+.gal-it{margin:0;position:relative}
+.gal-it:nth-child(even){margin-top:34px}
+.gal-w{grid-column:1/-1;margin-top:0 !important}
+.gal-in{position:relative;overflow:hidden;border-radius:6px;background:var(--paper,#F4EFE9);
+  box-shadow:0 14px 30px rgba(70,85,66,.18),0 0 0 1px rgba(187,153,96,.45);padding:5px;
+  clip-path:inset(0 0 0 0);will-change:clip-path}
+.gal-in img{display:block;width:100%;height:auto;border-radius:3px;transform:scale(1.08);transform-origin:50% 50%}
+@media (prefers-reduced-motion:reduce){.gal-in img{transform:none}}
 </style>
 </head>
 <body>
 
 <!-- LOADER -->
 <!-- Música ambiental -->
-<audio id="bgMusic" src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/boda-ciro-y-osmara/cancion.mp3" loop preload="none"></audio>
+<audio id="bgMusic" src="cancion.mp3?v=1" loop preload="none"></audio>
 
 <!-- Botón flotante de música · disco de vinilo -->
 <button id="musicBtn" class="pa-vinyl-btn" type="button" aria-label="Reproducir música">
@@ -3221,6 +3235,7 @@ body > footer{padding-bottom:120px !important}
     <li><a href="#family">Familias</a></li>
     <li><a href="#dresscode">Vestimenta</a></li>
     <li><a href="#hospedaje">Hospedaje</a></li>
+    <li><a href="#galeria">Galería</a></li>
     <li><a href="#gifts">Mesa de regalos</a></li>
     <li><a href="#album">Álbum</a></li>
     <li><a href="#rsvp">Confirmar asistencia</a></li>
@@ -3416,7 +3431,7 @@ body > footer{padding-bottom:120px !important}
     </div>
   </div>
 
-  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+de+Bruno+%26+Mafer&dates=20270228T000000Z/20270228T080000Z&details=Civil+6:00+PM%2C+Coctel+7:00+PM%2C+Cena+8:30+PM+en+La+Macarena+Sal%C3%B3n+Boutique.&location=La+Macarena+Sal%C3%B3n+Boutique%2C+Av.+Ignacio+L.+Vallarta+6112%2C+Zapopan%2C+Jalisco"
+  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+de+Bruno+%26+Mafer&dates=20270228T000000Z/20270228T080000Z&details=Ceremonia+Civil+6:00+PM%2C+Coctel+7:00+PM%2C+Vals+8:15+PM%2C+Cena+8:30+PM%2C+Party+Time+9:30+PM%2C+Hasta+Pronto+2:00+AM+en+La+Macarena+Sal%C3%B3n+Boutique.&location=La+Macarena+Sal%C3%B3n+Boutique%2C+Av.+Ignacio+L.+Vallarta+6112%2C+Zapopan%2C+Jalisco"
      target="_blank" rel="noopener" id="calBtn"
      class="btn btn-olive" style="max-width:310px;margin:26px auto 0;display:flex">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -3455,7 +3470,7 @@ body > footer{padding-bottom:120px !important}
 
     <div class="tl-row" data-side="left">
       <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-      <div class="tl-row-inner"><p class="tl-t">6:00 PM</p><p class="tl-ev">Civil</p></div>
+      <div class="tl-row-inner"><p class="tl-t">6:00 PM</p><p class="tl-ev">Ceremonia Civil</p></div>
     </div>
     <div class="tl-row" data-side="right">
       <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
@@ -3463,7 +3478,19 @@ body > footer{padding-bottom:120px !important}
     </div>
     <div class="tl-row" data-side="left">
       <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
+      <div class="tl-row-inner"><p class="tl-t">8:15 PM</p><p class="tl-ev">Vals</p></div>
+    </div>
+    <div class="tl-row" data-side="right">
+      <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
       <div class="tl-row-inner"><p class="tl-t">8:30 PM</p><p class="tl-ev">Cena</p></div>
+    </div>
+    <div class="tl-row" data-side="left">
+      <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
+      <div class="tl-row-inner"><p class="tl-t">9:30 PM</p><p class="tl-ev">Party Time</p></div>
+    </div>
+    <div class="tl-row" data-side="right">
+      <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
+      <div class="tl-row-inner"><p class="tl-t">2:00 AM</p><p class="tl-ev">Hasta Pronto</p></div>
     </div>
   </div>
 </section>
@@ -3498,10 +3525,8 @@ body > footer{padding-bottom:120px !important}
 <section id="dresscode" class="pa-dc" aria-label="Código de vestimenta">
   <div class="ink-bg ink-v1 ink-flip" aria-hidden="true"><i style="background-image:url(ink/ink-hero.webp)"></i></div>
   <span class="lbl">Código de vestimenta</span>
-  <h2 class="ttl foil-text">Formal</h2>
+  <h2 class="ttl foil-text">Formal con tenis</h2>
   <div class="gline"></div>
-  <p class="pa-dc-note">Los novios usaremos tenis e invitamos a los demás a que usen tenis y estén cómodos</p>
-
   <div class="dc-looks">
     <button class="dc-look" type="button" data-look="caballeros" aria-label="Ver ideas de vestimenta para caballeros">
       <span class="dc-look-ico" aria-hidden="true">
@@ -3535,10 +3560,11 @@ body > footer{padding-bottom:120px !important}
     <p class="pa-dc-sub">Colores a evitar</p>
     <ul class="pa-dc-sws pa-dc-one" role="list">
       <li class="pa-dc-sw" style="--c:#FFFFFF;--d:0s"><span class="pa-dc-dot" aria-hidden="true"><span class="pa-dc-fill"></span></span><span class="pa-dc-name">Blanco</span></li>
+      <li class="pa-dc-sw" style="--c:#FFFCF5;--d:-1.2s"><span class="pa-dc-dot" aria-hidden="true"><span class="pa-dc-fill"></span></span><span class="pa-dc-name">Blanco hueso</span></li>
     </ul>
   </div>
 
-  <p class="pa-dc-msg"><span class="pa-dc-star" aria-hidden="true">&#10022;</span>El blanco está reservado para la novia. ¡Gracias por tu comprensión!</p>
+  <p class="pa-dc-msg"><span class="pa-dc-star" aria-hidden="true">&#10022;</span>El blanco y sus tonos están reservados para la novia. ¡Gracias por tu comprensión!</p>
 </section>
 
 
@@ -3600,6 +3626,27 @@ body > footer{padding-bottom:120px !important}
       </div>
 
     </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ GALERÍA ═══════════════ -->
+<section id="galeria">
+  <span class="lbl">Nuestros momentos</span>
+  <h2 class="ttl foil-text">Galería</h2>
+  <div class="gline"></div>
+  <div class="gal-grid" id="galGrid">
+    <figure class="gal-it gal-p" data-i="1"><div class="gal-in"><img src="fotos/foto01.jpg" alt="Bruno cargando a Mafer en blanco y negro" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
+    <figure class="gal-it gal-p" data-i="2"><div class="gal-in"><img src="fotos/foto02.jpg" alt="Beso al atardecer" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
+    <figure class="gal-it gal-p" data-i="3"><div class="gal-in"><img src="fotos/foto03.jpg" alt="Mafer y Bruno sentados sonriendo" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
+    <figure class="gal-it gal-p" data-i="4"><div class="gal-in"><img src="fotos/foto04.jpg" alt="Abrazo en blanco y negro" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
+    <figure class="gal-it gal-p" data-i="5"><div class="gal-in"><img src="fotos/foto05.jpg" alt="Bruno y Mafer frente a la casona" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
+    <figure class="gal-it gal-p" data-i="6"><div class="gal-in"><img src="fotos/foto06.jpg" alt="Caminando de la mano" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
+    <figure class="gal-it gal-p" data-i="7"><div class="gal-in"><img src="fotos/foto07.jpg" alt="Frente al portón" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
+    <figure class="gal-it gal-p" data-i="8"><div class="gal-in"><img src="fotos/foto08.jpg" alt="Luz de atardecer junto al muro" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
+    <figure class="gal-it gal-p" data-i="9"><div class="gal-in"><img src="fotos/foto09.jpg" alt="Sonrisa y abrazo" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
+    <figure class="gal-it gal-p" data-i="10"><div class="gal-in"><img src="fotos/foto10.jpg" alt="Frente al mural" width="741" height="1400" loading="lazy" decoding="async"></div></figure>
+    <figure class="gal-it gal-w" data-i="11"><div class="gal-in"><img src="fotos/foto11.jpg" alt="Lentes de corazón y caja Bruno & Mafe" width="1400" height="933" loading="lazy" decoding="async"></div></figure>
   </div>
 </section>
 
@@ -3666,18 +3713,21 @@ body > footer{padding-bottom:120px !important}
       <div class="pa-env-msg" id="paEnvMsg" aria-live="polite">
         <p class="pa-env-title">Tu presencia es nuestro regalo</p>
         <span class="pa-env-div" aria-hidden="true">&#10022;</span>
-        <p class="pa-env-desc">Muy pronto compartiremos aquí los detalles de nuestra mesa de regalos.</p>
+        <p class="pa-env-desc">Si deseas tener un detalle con nosotros, preparamos una mesa de regalos en Amazon y en Liverpool, y también contaremos con lluvia de sobres.</p>
       </div>
     </div>
 
-    <div class="gf-card sheen pa-gf-amz" style="cursor:default">
-      <div class="gf-card-top">
-        <div class="gf-logo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 21V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
-        </div>
-        <p class="gf-ttl">Mesa de regalos</p>
-      </div>
-      <span class="gf-go">Por confirmar</span>
+    <a class="gf-card gf-amazon sheen pa-gf-amz" href="https://www.amazon.com.mx/wedding/share/bm2027" target="_blank" rel="noopener">
+      <div class="gf-card-top"><div class="gf-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 21V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg></div><p class="gf-ttl">Mesa de regalos Amazon</p></div>
+      <span class="gf-go">Ver mesa de regalos</span>
+    </a>
+    <a class="gf-card gf-amazon sheen pa-gf-amz pa-gf-liv" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/60063818" target="_blank" rel="noopener">
+      <div class="gf-card-top"><div class="gf-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1 14H5L6 7z"/><path d="M9 7a3 3 0 016 0"/></svg></div><p class="gf-ttl">Mesa de regalos Liverpool</p></div>
+      <span class="gf-go">Ver mesa de regalos</span>
+    </a>
+    <div class="gf-card sheen pa-gf-amz pa-gf-liv pa-gf-sob" style="cursor:default;max-width:340px;margin-left:auto;margin-right:auto">
+      <div class="gf-card-top"><div class="gf-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><p class="gf-ttl">Lluvia de sobres</p></div>
+      <p class="pa-gf-sob-t">Si prefieres obsequiarnos en efectivo, contaremos con lluvia de sobres el día de nuestra boda.</p>
     </div>
   </div>
 </section>
@@ -4680,7 +4730,7 @@ function toast(msg) {
   const audio = document.getElementById('bgMusic');
   const btn   = document.getElementById('musicBtn');
   if(!audio || !btn) return;
-  const START = 7;               /* segundo de arranque de la pista */
+  const START = 0;               /* segundo de arranque de la pista */
   let playing = false, seeked = false;
 
   function seekStart(){
@@ -4739,7 +4789,7 @@ function toast(msg) {
    - Si el archivo de la cancion falla (404, host caido, HTML en vez de mp3) se usa una de respaldo. */
 (function(){
   if(window.__elyAudio2) return; window.__elyAudio2=1;
-  var FALLBACK='https://boda-isaac-y-claudia.vercel.app/cancion.mp3';
+  var FALLBACK='cancion.mp3?r=2';
   var forced=false, gestured=false;
   function A(){ return document.querySelector('audio'); }
   function toFallback(a){
@@ -5874,6 +5924,27 @@ function initPadrinos(){
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
+})();
+</script>
+
+<script>
+/* GALERÍA · revelado con clip-path y parallax a distintas velocidades */
+(function(){
+  function go(){
+    if(!window.gsap || !window.ScrollTrigger) return;
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('#galeria .gal-it');
+    items.forEach(function(it, k){
+      var box = it.querySelector('.gal-in'), img = it.querySelector('img');
+      if(!reduced){
+        gsap.fromTo(box, {clipPath:'inset(0 0 100% 0)'}, {clipPath:'inset(0 0 0% 0)', duration:1.1, ease:'power2.out',
+          scrollTrigger:{trigger:it, start:'top 88%', once:true}});
+        gsap.fromTo(img, {yPercent:-5, scale:1.12}, {yPercent:5 + (k % 3) * 2, scale:1.08, ease:'none',
+          scrollTrigger:{trigger:it, start:'top bottom', end:'bottom top', scrub:true}});
+      }
+    });
+  }
+  if(document.readyState === 'complete') go(); else window.addEventListener('load', go);
 })();
 </script>
 </body>
