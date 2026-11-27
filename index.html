@@ -3226,6 +3226,26 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 .mo-w{grid-column:1/-1}
 .mo-low{margin-top:34px}
 .mo-grid .mo-it:first-child{margin-top:0}
+
+/* ═════════ PORTADA CON FOTO + IDIOMA ═════════ */
+#envelope-screen{display:flex !important;flex-direction:column !important;align-items:stretch !important;justify-content:flex-start !important}
+.cv-photo{flex:0 0 56%;background:url(fotos/foto06.jpg) center 22%/cover no-repeat;position:relative}
+.cv-in{flex:1;justify-content:center;padding:0 24px 22px;width:100%}
+.cv-mono{font-size:clamp(50px,15vw,66px) !important;margin-top:22px !important}
+.cv-names{font-size:20px !important;margin-top:4px !important}
+.cv-date{margin-top:8px !important}
+.cv-rule{display:none}
+.cv-lang,.mn-lang{display:flex;gap:8px;justify-content:center;margin-top:14px}
+.lang-btn{font-family:'Lato',sans-serif;font-weight:700 !important;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:9px 16px;min-height:40px;border-radius:50px;
+  border:1px solid #65534A;background:transparent;color:#65534A;cursor:pointer}
+.lang-btn.on{background:#65534A;color:#F4EFE9}
+#envelope-screen .env-tap{margin-top:16px !important;padding:14px 34px !important;border-radius:50px !important;background:#2F3A2C !important;color:#F4EFE9 !important;font-size:11.5px !important;letter-spacing:.24em !important;text-transform:uppercase;animation:none !important;opacity:1 !important}
+.mn-lang{margin-top:6px}
+.mn-lang .lang-btn{color:#65534A}
+/* iconos del itinerario */
+.tl-ic{display:block;color:#65534A;margin:0 0 4px}
+.tl-ic svg{width:24px;height:24px;display:block}
+.tl-row[data-side="right"] .tl-ic svg{margin-left:auto}
 </style>
 </head>
 <body>
@@ -3268,12 +3288,16 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 
 <!-- ═══════════════ SOBRE DE APERTURA ═══════════════ -->
 <div id="envelope-screen">
+  <div class="cv-photo" role="img" aria-label="Bruno y Mafer caminando de la mano"></div>
   <div class="cv-in">
     <p class="cv-mono">B <span>&amp;</span> M</p>
-    <span class="cv-rule" aria-hidden="true"></span>
     <p class="cv-names">Bruno y Mafer</p>
     <p class="cv-date">27 · Febrero · 2027</p>
-    <div class="env-tap" id="envTap"><span>Toca para abrir</span></div>
+    <div class="cv-lang" role="group" aria-label="Idioma / Language">
+      <button type="button" class="lang-btn" data-lang="es">Español</button>
+      <button type="button" class="lang-btn" data-lang="en">English</button>
+    </div>
+    <div class="env-tap" id="envTap"><span>Abrir invitación</span></div>
   </div>
 </div>
 
@@ -3305,6 +3329,7 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
     <li><a href="#rsvp">Confirmar asistencia</a></li>
   </ol>
   <span class="mn-rule" aria-hidden="true"></span>
+  <div class="mn-lang" role="group" aria-label="Idioma / Language"><button type="button" class="lang-btn" data-lang="es">Español</button><button type="button" class="lang-btn" data-lang="en">English</button></div>
 </div>
 
 
@@ -3534,27 +3559,27 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 
     <div class="tl-row" data-side="left">
       <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-      <div class="tl-row-inner"><p class="tl-t">6:00 PM</p><p class="tl-ev">Ceremonia Civil</p></div>
+      <div class="tl-row-inner"><span class="tl-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="14" r="5"/><circle cx="15" cy="14" r="5"/><path d="M9.5 4.2L11 6l1.5-1.8"/></svg></span><p class="tl-t">6:00 PM</p><p class="tl-ev">Ceremonia Civil</p></div>
     </div>
     <div class="tl-row" data-side="right">
       <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-      <div class="tl-row-inner"><p class="tl-t">7:00 PM</p><p class="tl-ev">Coctel</p></div>
+      <div class="tl-row-inner"><span class="tl-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="m19 3-7 8-7-8Z"/></svg></span><p class="tl-t">7:00 PM</p><p class="tl-ev">Coctel</p></div>
     </div>
     <div class="tl-row" data-side="left">
       <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-      <div class="tl-row-inner"><p class="tl-t">8:15 PM</p><p class="tl-ev">Primer Baile</p></div>
+      <div class="tl-row-inner"><span class="tl-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span><p class="tl-t">8:15 PM</p><p class="tl-ev">Primer Baile</p></div>
     </div>
     <div class="tl-row" data-side="right">
       <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-      <div class="tl-row-inner"><p class="tl-t">8:30 PM</p><p class="tl-ev">Cena</p></div>
+      <div class="tl-row-inner"><span class="tl-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></span><p class="tl-t">8:30 PM</p><p class="tl-ev">Cena</p></div>
     </div>
     <div class="tl-row" data-side="left">
       <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-      <div class="tl-row-inner"><p class="tl-t">9:30 PM</p><p class="tl-ev">Party Time</p></div>
+      <div class="tl-row-inner"><span class="tl-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span><p class="tl-t">9:30 PM</p><p class="tl-ev">Party Time</p></div>
     </div>
     <div class="tl-row" data-side="right">
       <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-      <div class="tl-row-inner"><p class="tl-t">2:00 AM</p><p class="tl-ev">Fin</p></div>
+      <div class="tl-row-inner"><span class="tl-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><p class="tl-t">2:00 AM</p><p class="tl-ev">Fin</p></div>
     </div>
   </div>
 </section>
@@ -3902,7 +3927,7 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
   <p class="gal-sub">Algunos de nuestros recuerdos juntos</p>
   <div class="mo-grid">
     <figure class="mo-it"><img src="fotos/foto03.jpg" alt="Mafer y Bruno sentados sonriendo" width="900" height="1350" loading="lazy" decoding="async"></figure>
-    <figure class="mo-it mo-low"><img src="fotos/foto06.jpg" alt="Caminando de la mano" width="900" height="1350" loading="lazy" decoding="async"></figure>
+    <figure class="mo-it mo-low"><img src="fotos/foto07.jpg" alt="Frente al portón" width="900" height="1350" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -5936,6 +5961,114 @@ function initPadrinos(){
   document.getElementById('fsPrev').addEventListener('click', function(){ go(idx()-1); });
   document.getElementById('fsNext').addEventListener('click', function(){ go(idx()+1); });
   dots.forEach(function(d,k){ d.addEventListener('click', function(){ go(k); }); });
+})();
+</script>
+
+<script>
+/* ═════════ IDIOMA · Español / English ═════════ */
+(function(){
+  var EN = {"Bruno y Mafer": "Bruno and Mafer", "27 · Febrero · 2027": "February · 27 · 2027", "Abrir invitación": "Open invitation", "Menú": "Menu", "Nuestra historia": "Our story", "La celebración": "The celebration", "Itinerario": "Itinerary", "Familias": "Families", "Vestimenta": "Dress code", "Hospedaje": "Lodging", "Fotos": "Photos", "Mesa de regalos": "Gift registry", "Álbum": "Album", "Confirmar asistencia": "Confirm attendance", "Nos casamos": "We are getting married", "Sábado · 27 · Febrero · 2027": "Saturday · February · 27 · 2027", "Guadalajara · Jalisco": "Guadalajara · Jalisco", "Esta invitación es para": "This invitation is for", "Desliza": "Scroll", "Bruno & Mafer": "Bruno & Mafer", "Nuestra": "Our", "historia": "story", "Una de nuestras primeras sesiones juntos": "One of our first photo sessions together", "Con el amor que nos une, queremos compartir contigo el día en que uniremos nuestras vidas.": "With the love that unites us, we want to share with you the day we join our lives.", "Será un honor contar con tu presencia en este nuevo comienzo.": "It will be an honor to have you with us at this new beginning.", "El gran día llega en": "The big day arrives in", "Cuenta": "The", "regresiva": "countdown", "Días": "Days", "Horas": "Hours", "Minutos": "Minutes", "Segundos": "Seconds", "¿Dónde y cuándo?": "Where and when?", "La": "The", "celebración": "celebration", "Ceremonia civil y recepción": "Civil ceremony and reception", "Todo sera en el mismo lugar": "Everything will be at the same place", "Ver ubicación": "View location", "No lo olvides": "Do not forget", "Reserva la": "Save the", "fecha": "date", "Febrero": "February", "Agregar al calendario": "Add to calendar", "El día de la boda": "The wedding day", "Todo sera en el mismo lugar – La Macarena Salón Boutique": "Everything will be at the same place – La Macarena Salón Boutique", "Ceremonia Civil": "Civil Ceremony", "Coctel": "Cocktail", "Primer Baile": "First Dance", "Cena": "Dinner", "Party Time": "Party Time", "Fin": "End", "Con el amor": "With the love", "de nuestras": "of our", "familias": "families", "Padres de la novia": "Bride's parents", "Padres del novio": "Groom's parents", "Nuestros padrinos": "Our godparents", "Por confirmar": "To be confirmed", "Código de vestimenta": "Dress code", "Formal con tenis": "Formal with sneakers", "Caballeros": "Gentlemen", "Ver ideas": "See ideas", "Damas": "Ladies", "Colores a evitar": "Colors to avoid", "Blanco": "White", "Blanco hueso": "Off-white", "El blanco y sus tonos están reservados para la novia. ¡Gracias por tu comprensión!": "White and its shades are reserved for the bride. Thank you for understanding!", "Chaleco y pantalón de vestir": "Vest and dress trousers", "Traje en tono arena": "Sand-colored suit", "Traje oscuro": "Dark suit", "Vestido largo claro": "Light long dress", "Vestido marino": "Navy dress", "Vestido champagne": "Champagne dress", "Para tu estancia": "For your stay", "sugerido": "suggested", "Quédate cerca de la recepción": "Stay close to the reception", "Lista": "List", "Mapa": "Map", "Hotel": "Hotel", "en auto a la recepción": "by car to the reception", "Reservar": "Book", "Cómo llegar": "Directions", "Recepción": "Reception", "Cargando mapa…": "Loading map…", "Toca un número para ver el hotel": "Tap a number to see the hotel", "Usa dos dedos para mover el mapa": "Use two fingers to move the map", "No se pudo cargar el mapa": "The map could not be loaded", "Nosotros": "Us", "Nuestras fotos": "Our photos", "Desliza para ver más": "Swipe to see more", "Con cariño": "With love", "Mesa de": "Gift", "regalos": "registry", "Tu presencia es nuestro regalo": "Your presence is our gift", "Si deseas tener un detalle con nosotros, preparamos una mesa de regalos en Amazon y en Liverpool, y también contaremos con lluvia de sobres.": "If you wish to give us a gift, we have set up registries at Amazon and Liverpool, and we will also have an envelope shower.", "Mesa de regalos Amazon": "Amazon gift registry", "Mesa de regalos Liverpool": "Liverpool gift registry", "Ver mesa de regalos": "View gift registry", "Lluvia de sobres": "Envelope shower", "Si prefieres obsequiarnos en efectivo, contaremos con lluvia de sobres el día de nuestra boda.": "If you prefer to give us cash, we will have an envelope shower on our wedding day.", "Comparte tus momentos": "Share your moments", "Álbum de": "Photo", "fotos": "album", "Álbum de fotos": "Photo album", "Ayúdanos a guardar cada momento: sube aquí las fotos que tomes durante el evento.": "Help us keep every moment: upload the photos you take during the event here.", "Subir mis fotos": "Upload my photos", "El álbum de fotos se habilita el día del evento. Regresa aquí y sube todas tus fotos de la noche.": "The photo album opens on the day of the event. Come back here and upload all your photos from the night.", "Confirmación de asistencia": "RSVP", "¿Nos": "Will you", "acompañas?": "join us?", "Aviso especial": "Special notice", "Evento solo para": "Event for", "adultos": "adults only", "Con todo nuestro cariño hemos pensado esta celebración para adultos. Sabemos que amas a tus pequeños tanto como nosotros, y por eso te regalamos esta noche para disfrutarla con nosotros. Gracias por tu comprensión.": "With all our love we have planned this celebration for adults. We know you love your little ones as much as we do, so we are giving you this night to enjoy with us. Thank you for understanding.", "Tu presencia lo": "Your presence is", "es todo": "everything", "Confírmanos tu asistencia antes del": "Please confirm your attendance before", "8 de enero de 2027": "January 8, 2027", ". Nos hará muy felices saber que estarás con nosotros.": ". We will be so happy to know you will be with us.", "Pases asignados": "Assigned passes", "Sí asistiré": "I will attend", "No podré asistir": "I cannot attend", "Escribe el nombre completo de cada persona": "Write each person's full name", "Modificar mi respuesta": "Edit my response", "Este es tu pase": "This is your pass", "Preséntalo": "Present it", "El día del evento, en la recepción": "On the day of the event, at the reception", "No encontramos tu invitación. Pide a los novios que te envíen tu enlace de nuevo.": "We could not find your invitation. Ask the couple to send you your link again.", "Fecha límite · 8 de enero de 2027": "Deadline · January 8, 2027", "Notas importantes": "Important notes", "El día del evento presenta tu pase en la recepción. Te pedimos de la manera más atenta respetar el número de pases asignados en tu invitación: cada lugar fue reservado con mucho cariño.": "On the day of the event, show your pass at the reception. We kindly ask you to respect the number of passes assigned in your invitation: each seat was reserved with great care.", "En caso de no confirmar asistencia, comprenderemos que no podrás acompañarnos ese día.": "If you do not confirm, we will understand that you will not be able to join us that day.", "Actualizar respuesta": "Update response", "Enviando…": "Sending…", "Fecha límite alcanzada": "Deadline reached", "La fecha para confirmar asistencia ha pasado.": "The date to confirm attendance has passed.", "Para confirmar necesitas abrir el enlace personalizado que te enviamos. Ese enlace lleva tu nombre y tus pases.": "To confirm you need to open the personalized link we sent you. That link carries your name and your passes.", "Por favor indícanos si podrás acompañarnos.": "Please let us know if you will be able to join us.", "Por favor escribe al menos un nombre completo.": "Please write at least one full name.", "Escribe un solo nombre en cada campo. Si vienen más personas, sube el contador y escribe cada nombre en su propio campo.": "Write only one name in each field. If more people are coming, raise the counter and write each name in its own field.", "Sin conexión. Verifica tu internet e inténtalo de nuevo.": "No connection. Check your internet and try again.", "No pudimos identificar tu invitación. Abre el enlace personalizado que te enviamos; ese es el único que registra tu confirmación.": "We could not identify your invitation. Open the personalized link we sent you; it is the only one that records your confirmation.", "Esta invitación ya no está activa. Por favor contacta a los novios para que te envíen un enlace nuevo.": "This invitation is no longer active. Please contact the couple so they can send you a new link.", "Hubo un problema al enviar. Inténtalo de nuevo.": "There was a problem sending. Please try again.", "¡Gracias por confirmar!": "Thank you for confirming!", "Gracias por avisarnos": "Thank you for letting us know", "Lamentamos que no puedas acompañarnos. Te vamos a extrañar.": "We are sorry you cannot join us. We will miss you.", "Usarás todos tus pases": "You will use all your passes", "Tu nombre completo": "Your full name", "Momentos": "Moments", "Algunos de nuestros recuerdos juntos": "Some of our memories together", "Con amor, los novios": "With love, the couple", "Diseño por @elysium.invitaciones": "Design by @elysium.invitaciones", "Pausar música": "Pause music", "Reproducir música": "Play music", "Secciones de la invitación": "Invitation sections", "Cerrar menú": "Close menu", "Jardín de La Macarena Salón Boutique iluminado de noche": "La Macarena Salón Boutique garden lit up at night", "Calendario de febrero de 2027 con el sábado 27 marcado": "February 2027 calendar with Saturday 27 marked", "Ver ideas de vestimenta para caballeros": "See dress ideas for gentlemen", "Ver ideas de vestimenta para damas": "See dress ideas for ladies", "Ver hospedaje como lista o mapa": "View lodging as a list or a map", "Mapa del hotel y la recepción": "Map of the hotel and the reception", "Acercar": "Zoom in", "Alejar": "Zoom out", "Ver todo": "See all", "Cerrar": "Close", "Foto anterior": "Previous photo", "Foto siguiente": "Next photo", "Fotos de Bruno y Mafer": "Photos of Bruno and Mafer", "Beso al atardecer": "Kiss at sunset", "Abrazo en blanco y negro": "Black and white embrace", "Luz de atardecer junto al muro": "Sunset light by the wall", "Bruno y Mafer frente a frente": "Bruno and Mafer face to face", "Código QR del álbum de fotos": "Photo album QR code", "Quitar un pase": "Remove a pass", "Agregar un pase": "Add a pass", "Mafer y Bruno sentados sonriendo": "Mafer and Bruno sitting and smiling", "Frente al portón": "In front of the gate", "Ideas de vestimenta": "Dress ideas", "Anterior": "Previous", "Siguiente": "Next", "Bruno y Mafer caminando de la mano": "Bruno and Mafer walking hand in hand", "Idioma / Language": "Idioma / Language", "Recepción: La Macarena Salón Boutique": "Reception: La Macarena Salón Boutique", "Hotel 1: Candlewood Suites Guadalajara Galerias, an IHG Hotel": "Hotel 1: Candlewood Suites Guadalajara Galerias, an IHG Hotel", "Bruno & Mafer · 27 · Febrero · 2027": "Bruno & Mafer · February · 27 · 2027"};
+  var RX = [
+    [/^Tienes (\d+) pases reservados\. Aumenta el número de pases que vayas a ocupar\.$/, 'You have $1 passes reserved. Raise the number of passes you will use.'],
+    [/^(\d+) de (\d+) pases$/, '$1 of $2 passes'],
+    [/^Te esperamos, (.+)\.$/, 'We look forward to seeing you, $1.'],
+    [/^Confirmamos (\d+) lugares: (.+)\.$/, 'We confirmed $1 seats: $2.'],
+    [/^Nombre completo del invitado (\d+)$/, 'Full name of guest $1'],
+    [/^Elegiste (\d+) pases pero escribiste (\d+) nombres?\. Escribe (?:el nombre que falta|los (\d+) nombres que faltan) o baja el contador a los pases que vas a utilizar\.$/,
+      function(m, a, b, c){ return 'You chose ' + a + ' passes but wrote ' + b + ' name' + (b === '1' ? '' : 's') + '. Write ' + (c ? 'the ' + c + ' missing names' : 'the missing name') + ' or lower the counter to the passes you will use.'; }],
+    [/^(\d+(?:\.\d+)?) min · (\d+(?:\.\d+)?) km$/, '$1 min · $2 km'],
+    [/^Foto (\d+)$/, 'Photo $1'], [/^Ver idea (\d+)$/, 'See idea $1'],
+    [/^(.+) — foto (\d+)$/, '$1 — photo $2'],
+    [/^(\d+) min en auto a la iglesia$/, '$1 min by car to the church'],
+    [/^(.+?)  ·  (\d+) \/ (\d+)$/, function(m, c, i, t){ return (EN[c] || c) + '  ·  ' + i + ' / ' + t; }]
+  ];
+  var DOW = ['M','T','W','T','F','S','S'];
+  var lang = 'es';
+  try{
+    var q = new URLSearchParams(location.search).get('lang');
+    lang = (q === 'en' || q === 'es') ? q : (localStorage.getItem('ely_lang') || 'es');
+  }catch(e){}
+  var rec = new WeakMap(), arec = new WeakMap(), busy = false;
+  var ATTRS = ['alt','aria-label','placeholder','title'];
+  function norm(t){ return t.replace(/\s+/g, ' ').trim(); }
+  function tr(t){
+    var k = norm(t); if(!k) return null;
+    if(EN.hasOwnProperty(k)) return EN[k];
+    for(var i = 0; i < RX.length; i++){ if(RX[i][0].test(k)) return k.replace(RX[i][0], RX[i][1]); }
+    return null;
+  }
+  function skip(el){ return !el || /^(SCRIPT|STYLE|NOSCRIPT|TEXTAREA)$/.test(el.tagName); }
+  function doText(n){
+    var pe = n.parentElement; if(skip(pe)) return;
+    var r = rec.get(n), v = n.nodeValue;
+    if(r && v === r.en){ if(lang === 'es'){ n.nodeValue = r.es; rec.delete(n); } return; }
+    if(r && v === r.es){ if(lang === 'es') rec.delete(n); }
+    if(lang !== 'en') return;
+    var en = null;
+    if(pe.classList && pe.classList.contains('cal-dow')){ var all = pe.parentElement.querySelectorAll('.cal-dow'); var ix = Array.prototype.indexOf.call(all, pe); en = DOW[ix]; }
+    else en = tr(v);
+    if(en == null) return;
+    var lead = (v.match(/^\s*/) || [''])[0], trail = (v.match(/\s*$/) || [''])[0];
+    var out = lead + en + trail;
+    if(out === v) return;
+    rec.set(n, {es: v, en: out}); n.nodeValue = out;
+  }
+  function doAttrs(el){
+    if(!el.getAttribute) return;
+    for(var i = 0; i < ATTRS.length; i++){
+      var a = ATTRS[i], v = el.getAttribute(a); if(v == null) continue;
+      var m = arec.get(el) || {}, r = m[a];
+      if(r && v === r.en){ if(lang === 'es'){ el.setAttribute(a, r.es); delete m[a]; } continue; }
+      if(lang !== 'en') continue;
+      var en = tr(v); if(en == null || en === v) continue;
+      m[a] = {es: v, en: en}; arec.set(el, m); el.setAttribute(a, en);
+    }
+  }
+  function scan(root){
+    busy = true;
+    try{
+      if(root.nodeType === 3){ doText(root); }
+      else{
+        var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), n;
+        while((n = w.nextNode())) doText(n);
+        if(root.nodeType === 1){ doAttrs(root); }
+        var els = root.querySelectorAll ? root.querySelectorAll('[alt],[aria-label],[placeholder],[title]') : [];
+        for(var i = 0; i < els.length; i++) doAttrs(els[i]);
+      }
+    }finally{ busy = false; }
+  }
+  var T0 = document.title, D0 = (document.querySelector('meta[name=description]') || {}).content;
+  function apply(l){
+    lang = l; try{ localStorage.setItem('ely_lang', l); }catch(e){}
+    document.documentElement.lang = l;
+    document.title = l === 'en' ? (EN[norm(T0.replace(/&amp;/g,'&'))] || T0) : T0;
+    var md = document.querySelector('meta[name=description]');
+    if(md && D0) md.content = l === 'en' ? 'We are getting married. Bruno Busquets and Mafer López · Saturday, February 27, 2027 · Guadalajara, Jalisco.' : D0;
+    document.querySelectorAll('.lang-btn').forEach(function(b){ var on = b.dataset.lang === l; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    scan(document.body);
+  }
+  var mo = new MutationObserver(function(list){
+    if(busy) return;
+    busy = true; var nodes = [];
+    list.forEach(function(m){
+      if(m.type === 'characterData') nodes.push(m.target);
+      else if(m.type === 'attributes') nodes.push(m.target);
+      else m.addedNodes.forEach(function(n){ nodes.push(n); });
+    });
+    busy = false;
+    nodes.forEach(function(n){ if(n.nodeType === 3 || n.nodeType === 1) scan(n); });
+  });
+  function boot(){
+    document.querySelectorAll('.lang-btn').forEach(function(b){
+      function pick(e){ e.stopPropagation(); }
+      b.addEventListener('touchstart', pick, {passive:true});
+      b.addEventListener('click', function(e){ e.stopPropagation(); e.preventDefault(); apply(b.dataset.lang); });
+    });
+    apply(lang);
+    mo.observe(document.body, {childList:true, subtree:true, characterData:true, attributes:true, attributeFilter:ATTRS});
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+  window.__elyLang = function(){ return lang; };
 })();
 </script>
 </body>
