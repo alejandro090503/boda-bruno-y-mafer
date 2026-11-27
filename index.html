@@ -9,11 +9,11 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bruno &amp; Mafer · 27 · Febrero · 2027">
   <meta property="og:description" content="Nos casamos. Guadalajara, Jalisco. Confirma tu asistencia.">
-  <meta property="og:image" content="https://boda-bruno-y-mafer.vercel.app/og.jpg?v=1">
+  <meta property="og:image" content="https://boda-bruno-y-mafer.vercel.app/og.jpg?v=2">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Great+Vibes&family=Playfair+Display:wght@600;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
   <style>
 /* ── TOKENS ───────────────────────────────────────────── */
 :root {
@@ -3154,17 +3154,55 @@ body > footer{padding-bottom:120px !important}
 .fam-god-pend{text-align:center;margin-top:34px}
 .fam-god-pend .fam-n{font-style:italic;opacity:.85}
 
-/* ═════════ GALERÍA (revelado con máscara + parallax) ═════════ */
-#galeria{position:relative;padding:70px 16px 50px;text-align:center}
-.gal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:520px;margin:30px auto 0;align-items:start}
-.gal-it{margin:0;position:relative}
-.gal-it:nth-child(even){margin-top:34px}
+
+/* ═════════ ESTILO SENCILLO (referencias del cliente: plantilla 84 estilo/tipografía, plantilla 57 forma de fotos) ═════════ */
+:root{--f-disp:'Playfair Display',serif;--f-sans:'Inter',system-ui,sans-serif;--f-it:'Cormorant Garamond',serif}
+body{background:#F4EFE9 !important}
+.ink-bg,.sec-wave,.sec-medal,.h-particles,.hero-fx,.hf-dust,.hf-glow,.hf-sweep,#petals,.h-frame{display:none !important}
+section,footer{background-color:transparent}
+/* títulos: Playfair en mayúsculas, color sólido */
+.foil-text{background:none !important;-webkit-text-fill-color:currentColor !important;animation:none !important;text-shadow:none !important}
+.lbl{font-family:var(--f-sans) !important;font-weight:600 !important;font-size:12px !important;letter-spacing:.3em !important;color:#6B5226 !important;animation:none !important}
+.ttl{font-family:var(--f-disp) !important;font-weight:700 !important;font-size:clamp(24px,7.2vw,30px) !important;letter-spacing:.07em !important;text-transform:uppercase;color:#2F3A2C !important;line-height:1.3 !important}
+.ttl .ttl-script,.ttl-script{font-family:var(--f-it) !important;font-style:italic;font-weight:600 !important;text-transform:none;letter-spacing:0 !important;font-size:1.18em !important;color:#465542 !important;padding:0 !important}
+.h-we{font-family:var(--f-sans) !important;font-size:12px !important;letter-spacing:.34em !important;color:#6B5226 !important}
+.h-name{font-family:var(--f-disp) !important;font-weight:700 !important;font-style:normal !important;text-transform:uppercase;letter-spacing:.1em !important;font-size:clamp(36px,11vw,48px) !important;color:#2F3A2C !important}
+.h-amp{font-family:var(--f-it) !important;font-style:italic;font-weight:600 !important;font-size:44px !important;color:#8A6D2F !important}
+.h-date{font-family:var(--f-sans) !important;font-weight:600 !important;font-size:13px !important;letter-spacing:.22em !important;color:#2F3A2C !important}
+.h-city{font-family:var(--f-it) !important;font-style:italic;font-weight:600 !important;font-size:20px !important;color:#465542 !important}
+.ft-nms{font-family:var(--f-disp) !important;font-weight:700 !important;text-transform:uppercase;letter-spacing:.1em !important;font-size:clamp(26px,8vw,34px) !important;color:#2F3A2C !important}
+.ft-dt{font-family:var(--f-sans) !important;font-weight:600 !important;letter-spacing:.2em !important}
+/* portada sencilla */
+#envelope-screen{background:#F4EFE9 !important;display:flex;align-items:center;justify-content:center;text-align:center}
+.cv-bg{position:absolute;inset:0;background:url(botanica1.webp) center/cover;opacity:.16;pointer-events:none}
+.cv-in{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:0;padding:0 24px}
+.cv-names{margin:0;font-family:var(--f-it);font-style:italic;font-weight:600;font-size:clamp(40px,13vw,54px);line-height:1.1;color:#2F3A2C}
+.cv-names span{color:#8A6D2F}
+.cv-rule{display:block;width:70px;height:1px;background:#BB9960;margin:18px 0 20px}
+.cv-date{margin:0;font-family:var(--f-sans);font-weight:600;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:#2F3A2C}
+.cv-city{margin:8px 0 0;font-family:var(--f-it);font-style:italic;font-weight:600;font-size:19px;color:#465542}
+#envelope-screen .env-tap{position:static;transform:none;margin-top:56px;display:flex;flex-direction:column;align-items:center;gap:10px;
+  font-family:var(--f-sans);font-weight:600;font-size:11.5px;letter-spacing:.28em;color:#2F3A2C;padding:0;border:0;background:none;backdrop-filter:none;opacity:1;animation:cvHint 2.4s ease-in-out infinite}
+#envelope-screen .env-tap::before{display:none}
+@keyframes cvHint{0%,100%{opacity:.55;transform:translateY(0)}50%{opacity:1;transform:translateY(-4px)}}
+@media (prefers-reduced-motion:reduce){#envelope-screen .env-tap{animation:none}}
+/* fotos: formas de la plantilla 57 (esquinas redondeadas, mosaico) */
+.story-photo-in{border-radius:18px !important;overflow:hidden;box-shadow:0 12px 28px rgba(70,85,66,.16) !important}
+.story-photo-in img{border-radius:18px !important}
+.gal-sub{margin:-2px 0 0;text-align:center;font-family:var(--f-it);font-style:italic;font-weight:600;font-size:19px;color:#465542}
+.gal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:520px;margin:28px auto 0;align-items:start}
+.gal-it{margin:0}
+.gal-it img{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 10px 24px rgba(70,85,66,.16);transform:none !important}
+.gal-it:nth-child(even){margin-top:28px}
 .gal-w{grid-column:1/-1;margin-top:0 !important}
-.gal-in{position:relative;overflow:hidden;border-radius:6px;background:var(--paper,#F4EFE9);
-  box-shadow:0 14px 30px rgba(70,85,66,.18),0 0 0 1px rgba(187,153,96,.45);padding:5px;
-  clip-path:inset(0 0 0 0);will-change:clip-path}
-.gal-in img{display:block;width:100%;height:auto;border-radius:3px;transform:scale(1.08);transform-origin:50% 50%}
-@media (prefers-reduced-motion:reduce){.gal-in img{transform:none}}
+.gal-w+.gal-p{margin-top:0}
+
+.foil-text .ttl-script,.ttl .ttl-script{-webkit-text-fill-color:#465542 !important;background:none !important;color:#465542 !important}
+.rsvp-title{font-family:var(--f-disp) !important;font-weight:700 !important;text-transform:uppercase;letter-spacing:.06em !important;font-size:clamp(21px,6.4vw,26px) !important;color:#2F3A2C !important}
+.rsvp-title em{font-family:var(--f-it) !important;font-style:italic;font-weight:600 !important;text-transform:none;letter-spacing:0;font-size:1.15em;color:#465542 !important}
+.pa-gf-plain{max-width:340px;margin:18px auto 0;text-align:center}
+.pa-gf-plain .pa-env-title{font-family:var(--f-it);font-style:italic;font-weight:700;font-size:26px;color:#2F3A2C;margin:0 0 8px}
+.pa-gf-plain .pa-env-desc{font-family:var(--f-it);font-weight:600;font-size:19px;line-height:1.5;color:#2F3A2C;margin:0}
 </style>
 </head>
 <body>
@@ -3204,13 +3242,17 @@ body > footer{padding-bottom:120px !important}
 })();
 </script>
 
-<div id="petals" aria-hidden="true"></div>
 
 <!-- ═══════════════ SOBRE DE APERTURA ═══════════════ -->
 <div id="envelope-screen">
-  <img id="envImage" src="sobre.webp" alt="Sobre de la invitación de Bruno y Mafer">
-  <video id="envVideo" src="sobre-apertura.mp4" muted playsinline preload="auto" poster="sobre.webp"></video>
-  <div class="env-tap" id="envTap">Toca para abrir</div>
+  <div class="cv-bg" aria-hidden="true"></div>
+  <div class="cv-in">
+    <p class="cv-names">Bruno <span>&amp;</span> Mafer</p>
+    <span class="cv-rule" aria-hidden="true"></span>
+    <p class="cv-date">27 · Febrero · 2027</p>
+    <p class="cv-city">Guadalajara · Jalisco</p>
+    <div class="env-tap" id="envTap"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V5.5a1.5 1.5 0 013 0V11m0-1.5V4a1.5 1.5 0 013 0v6m0-4.5a1.5 1.5 0 013 0V12m0-3.5a1.5 1.5 0 013 0V15a6 6 0 01-6 6h-1.5a6 6 0 01-5-2.7L4 14.5a1.6 1.6 0 012.6-1.8L8 14"/></svg><span>Toca para abrir</span></div>
+  </div>
 </div>
 
 <!-- SCROLL PROGRESS -->
@@ -3308,7 +3350,7 @@ body > footer{padding-bottom:120px !important}
   <div class="gline"></div>
 
   <figure class="story-photo" id="storyPhoto">
-    <div class="story-photo-in"><img src="pareja.jpg" alt="Bruno y Mafer" loading="lazy" width="694" height="867"></div>
+    <div class="story-photo-in"><img src="pareja.jpg" alt="Bruno y Mafer" loading="lazy" width="800" height="1000"></div>
     <figcaption>Una de nuestras primeras sesiones juntos</figcaption>
   </figure>
 
@@ -3431,7 +3473,7 @@ body > footer{padding-bottom:120px !important}
     </div>
   </div>
 
-  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+de+Bruno+%26+Mafer&dates=20270228T000000Z/20270228T080000Z&details=Ceremonia+Civil+6:00+PM%2C+Coctel+7:00+PM%2C+Vals+8:15+PM%2C+Cena+8:30+PM%2C+Party+Time+9:30+PM%2C+Hasta+Pronto+2:00+AM+en+La+Macarena+Sal%C3%B3n+Boutique.&location=La+Macarena+Sal%C3%B3n+Boutique%2C+Av.+Ignacio+L.+Vallarta+6112%2C+Zapopan%2C+Jalisco"
+  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+de+Bruno+%26+Mafer&dates=20270228T000000Z/20270228T080000Z&details=Ceremonia+Civil+6:00+PM%2C+Coctel+7:00+PM%2C+Cena+8:30+PM+en+La+Macarena+Sal%C3%B3n+Boutique.&location=La+Macarena+Sal%C3%B3n+Boutique%2C+Av.+Ignacio+L.+Vallarta+6112%2C+Zapopan%2C+Jalisco"
      target="_blank" rel="noopener" id="calBtn"
      class="btn btn-olive" style="max-width:310px;margin:26px auto 0;display:flex">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -3478,19 +3520,7 @@ body > footer{padding-bottom:120px !important}
     </div>
     <div class="tl-row" data-side="left">
       <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-      <div class="tl-row-inner"><p class="tl-t">8:15 PM</p><p class="tl-ev">Vals</p></div>
-    </div>
-    <div class="tl-row" data-side="right">
-      <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
       <div class="tl-row-inner"><p class="tl-t">8:30 PM</p><p class="tl-ev">Cena</p></div>
-    </div>
-    <div class="tl-row" data-side="left">
-      <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-      <div class="tl-row-inner"><p class="tl-t">9:30 PM</p><p class="tl-ev">Party Time</p></div>
-    </div>
-    <div class="tl-row" data-side="right">
-      <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-      <div class="tl-row-inner"><p class="tl-t">2:00 AM</p><p class="tl-ev">Hasta Pronto</p></div>
     </div>
   </div>
 </section>
@@ -3527,6 +3557,8 @@ body > footer{padding-bottom:120px !important}
   <span class="lbl">Código de vestimenta</span>
   <h2 class="ttl foil-text">Formal con tenis</h2>
   <div class="gline"></div>
+  <p class="pa-dc-note">Los novios usaremos tenis e invitamos a los demás a que usen tenis y estén cómodos</p>
+
   <div class="dc-looks">
     <button class="dc-look" type="button" data-look="caballeros" aria-label="Ver ideas de vestimenta para caballeros">
       <span class="dc-look-ico" aria-hidden="true">
@@ -3632,21 +3664,22 @@ body > footer{padding-bottom:120px !important}
 
 <!-- ═══════════════ GALERÍA ═══════════════ -->
 <section id="galeria">
-  <span class="lbl">Nuestros momentos</span>
+  <span class="lbl">Momentos</span>
   <h2 class="ttl foil-text">Galería</h2>
   <div class="gline"></div>
+  <p class="gal-sub">Algunos de nuestros recuerdos juntos</p>
   <div class="gal-grid" id="galGrid">
-    <figure class="gal-it gal-p" data-i="1"><div class="gal-in"><img src="fotos/foto01.jpg" alt="Bruno cargando a Mafer en blanco y negro" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
-    <figure class="gal-it gal-p" data-i="2"><div class="gal-in"><img src="fotos/foto02.jpg" alt="Beso al atardecer" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
-    <figure class="gal-it gal-p" data-i="3"><div class="gal-in"><img src="fotos/foto03.jpg" alt="Mafer y Bruno sentados sonriendo" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
-    <figure class="gal-it gal-p" data-i="4"><div class="gal-in"><img src="fotos/foto04.jpg" alt="Abrazo en blanco y negro" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
-    <figure class="gal-it gal-p" data-i="5"><div class="gal-in"><img src="fotos/foto05.jpg" alt="Bruno y Mafer frente a la casona" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
-    <figure class="gal-it gal-p" data-i="6"><div class="gal-in"><img src="fotos/foto06.jpg" alt="Caminando de la mano" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
-    <figure class="gal-it gal-p" data-i="7"><div class="gal-in"><img src="fotos/foto07.jpg" alt="Frente al portón" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
-    <figure class="gal-it gal-p" data-i="8"><div class="gal-in"><img src="fotos/foto08.jpg" alt="Luz de atardecer junto al muro" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
-    <figure class="gal-it gal-p" data-i="9"><div class="gal-in"><img src="fotos/foto09.jpg" alt="Sonrisa y abrazo" width="900" height="1350" loading="lazy" decoding="async"></div></figure>
-    <figure class="gal-it gal-p" data-i="10"><div class="gal-in"><img src="fotos/foto10.jpg" alt="Frente al mural" width="741" height="1400" loading="lazy" decoding="async"></div></figure>
-    <figure class="gal-it gal-w" data-i="11"><div class="gal-in"><img src="fotos/foto11.jpg" alt="Lentes de corazón y caja Bruno & Mafe" width="1400" height="933" loading="lazy" decoding="async"></div></figure>
+    <figure class="gal-it gal-w"><img src="fotos/foto11.jpg" alt="Lentes de corazón y caja Bruno & Mafe" width="1400" height="933" loading="lazy" decoding="async"></figure>
+    <figure class="gal-it gal-p"><img src="fotos/foto03.jpg" alt="Mafer y Bruno sentados sonriendo" width="900" height="1350" loading="lazy" decoding="async"></figure>
+    <figure class="gal-it gal-p"><img src="fotos/foto02.jpg" alt="Beso al atardecer" width="900" height="1350" loading="lazy" decoding="async"></figure>
+    <figure class="gal-it gal-p"><img src="fotos/foto12.jpg" alt="Bruno y Mafer frente a frente" width="900" height="1350" loading="lazy" decoding="async"></figure>
+    <figure class="gal-it gal-p"><img src="fotos/foto01.jpg" alt="Bruno cargando a Mafer en blanco y negro" width="900" height="1350" loading="lazy" decoding="async"></figure>
+    <figure class="gal-it gal-p"><img src="fotos/foto04.jpg" alt="Abrazo en blanco y negro" width="900" height="1350" loading="lazy" decoding="async"></figure>
+    <figure class="gal-it gal-p"><img src="fotos/foto05.jpg" alt="Bruno y Mafer frente a la casona" width="900" height="1350" loading="lazy" decoding="async"></figure>
+    <figure class="gal-it gal-p"><img src="fotos/foto06.jpg" alt="Caminando de la mano" width="900" height="1350" loading="lazy" decoding="async"></figure>
+    <figure class="gal-it gal-p"><img src="fotos/foto07.jpg" alt="Frente al portón" width="900" height="1350" loading="lazy" decoding="async"></figure>
+    <figure class="gal-it gal-p"><img src="fotos/foto08.jpg" alt="Luz de atardecer junto al muro" width="900" height="1350" loading="lazy" decoding="async"></figure>
+    <figure class="gal-it gal-p"><img src="fotos/foto09.jpg" alt="Sonrisa y abrazo" width="900" height="1350" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -3661,63 +3694,12 @@ body > footer{padding-bottom:120px !important}
     <h2 class="ttl foil-text">Mesa de <span class="ttl-script">regalos</span></h2>
     <div class="gline"></div>
 
-    <div class="pa-env-wrap" id="paEnvWrap">
-      <button class="pa-env" id="paEnv" type="button" aria-expanded="false" aria-controls="paEnvMsg"
-              aria-label="Sobre de regalos: toca para abrir">
-        <span class="pa-env-body" id="paEnvBody">
-          <svg class="pa-env-svg" viewBox="0 0 260 200" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-              <linearGradient id="paEnvPaper" x1="0" y1="1" x2="1" y2="0">
-                <stop offset="0%" stop-color="#EDE1D3"/><stop offset="100%" stop-color="#F6F3EE"/>
-              </linearGradient>
-              <linearGradient id="paEnvGold" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#7E612D"/><stop offset="30%" stop-color="#BB9960"/>
-                <stop offset="50%" stop-color="#F7E7CE"/><stop offset="72%" stop-color="#BB9960"/>
-                <stop offset="100%" stop-color="#7E612D"/>
-              </linearGradient>
-            </defs>
-            <rect x="18" y="52" width="224" height="132" rx="8" fill="url(#paEnvPaper)" stroke="url(#paEnvGold)" stroke-width="1.6"/>
-            <rect x="24" y="58" width="212" height="120" rx="5" fill="none" stroke="rgba(187,153,96,.35)" stroke-width=".8"/>
-            <path d="M18 184 L130 110 L242 184" stroke="rgba(126,97,45,.42)" stroke-width="1.1" fill="none"/>
-          </svg>
-          <span class="pa-env-flap" aria-hidden="true">
-            <svg viewBox="0 0 224 86" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="paEnvFlap" x1="0" y1="1" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#E4DACE"/><stop offset="100%" stop-color="#F6F3EE"/>
-                </linearGradient>
-              </defs>
-              <path d="M0 0 L112 86 L224 0 Z" fill="url(#paEnvFlap)" stroke="url(#paEnvGold)" stroke-width="1.7" stroke-linejoin="round"/>
-              <path d="M10 3 L112 80 L214 3" fill="none" stroke="rgba(187,153,96,.4)" stroke-width=".8"/>
-            </svg>
-          </span>
-          <svg class="pa-env-seal" viewBox="0 0 60 60" aria-hidden="true">
-            <defs>
-              <radialGradient id="paSealWax" cx="38%" cy="32%" r="75%">
-                <stop offset="0%" stop-color="#6D8367"/><stop offset="55%" stop-color="#465542"/><stop offset="100%" stop-color="#293326"/>
-              </radialGradient>
-              <linearGradient id="paSealFoil" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#F7E7CE"/><stop offset="45%" stop-color="#BB9960"/><stop offset="100%" stop-color="#9B7C47"/>
-              </linearGradient>
-            </defs>
-            <circle cx="30" cy="30" r="28" fill="url(#paSealWax)"/>
-            <circle cx="30" cy="30" r="27.2" fill="none" stroke="url(#paSealFoil)" stroke-width="1.6"/>
-            <circle cx="30" cy="30" r="21.5" fill="none" stroke="url(#paSealFoil)" stroke-width=".9" opacity=".85"/>
-            <text x="30" y="35.6" text-anchor="middle" font-family="'Cinzel', serif" font-weight="600" font-size="15" letter-spacing=".5" fill="url(#paSealFoil)">B&amp;M</text>
-          </svg>
-        </span>
-      </button>
-
-      <button class="pa-env-hint" id="paEnvHint" type="button" aria-controls="paEnvMsg">Toca para abrir</button>
-
-      <div class="pa-env-msg" id="paEnvMsg" aria-live="polite">
-        <p class="pa-env-title">Tu presencia es nuestro regalo</p>
-        <span class="pa-env-div" aria-hidden="true">&#10022;</span>
-        <p class="pa-env-desc">Si deseas tener un detalle con nosotros, preparamos una mesa de regalos en Amazon y en Liverpool, y también contaremos con lluvia de sobres.</p>
-      </div>
+    <div class="pa-gf-plain">
+      <p class="pa-env-title">Tu presencia es nuestro regalo</p>
+      <p class="pa-env-desc">Si deseas tener un detalle con nosotros, preparamos una mesa de regalos en Amazon y en Liverpool, y también contaremos con lluvia de sobres.</p>
     </div>
 
-    <a class="gf-card gf-amazon sheen pa-gf-amz" href="https://www.amazon.com.mx/wedding/share/bm2027" target="_blank" rel="noopener">
+    <a class="gf-card gf-amazon sheen pa-gf-amz" href="https://www.amazon.com.mx/wedding/guest-view/1JWUUOO0QINQO" target="_blank" rel="noopener">
       <div class="gf-card-top"><div class="gf-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 21V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg></div><p class="gf-ttl">Mesa de regalos Amazon</p></div>
       <span class="gf-go">Ver mesa de regalos</span>
     </a>
@@ -3913,49 +3895,29 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ── SOBRE · toca para abrir ─────────────────────────── */
 function initEnvelope(){
   const screen = document.getElementById('envelope-screen');
-  const img    = document.getElementById('envImage');
-  const video  = document.getElementById('envVideo');
   const tap    = document.getElementById('envTap');
   if (!screen) { bootInvitation(); return; }
   let tapped = false, finished = false;
-
-  gsap.fromTo(img, {scale:1.06}, {scale:1, duration:8, ease:'power1.out'});
-  gsap.fromTo(tap, {opacity:0,y:8}, {opacity:1,y:0,duration:.9,delay:1.1,ease:'power2.out'});
+  gsap.fromTo('.cv-in > *', {opacity:0, y:14}, {opacity:1, y:0, duration:.9, stagger:.18, ease:'power2.out', clearProps:'transform'});
 
   function finish(){
     if (finished) return; finished = true;
     document.body.classList.remove('env-locked');
-    gsap.to(screen, {opacity:0, duration:1, ease:'power2.inOut', onComplete(){
+    gsap.to(screen, {opacity:0, duration:.8, ease:'power2.inOut', onComplete(){
       screen.style.display = 'none';
       bootInvitation();
     }});
   }
-
   function onTap(e){
     if (tapped) return; tapped = true;
     e.preventDefault();
     if (typeof window._startMusic === 'function') window._startMusic();
-    else {                                   /* red de seguridad */
+    else {
       const a = document.getElementById('bgMusic');
       if (a) { a.volume = .32; a.play().catch(()=>{}); }
     }
-    gsap.to(tap, {opacity:0, duration:.3});
-    function crossfade(){
-      gsap.to(img,   {opacity:0, duration:.45, ease:'power2.inOut'});
-      gsap.to(video, {opacity:1, duration:.45, ease:'power2.inOut'});
-    }
-    function play(){
-      const pr = video.play();
-      if (pr && pr.catch) pr.catch(()=>{});
-      if (video.readyState >= 2) crossfade();
-      else { video.addEventListener('playing', crossfade, {once:true}); setTimeout(crossfade, 700); }
-    }
-    if (video.readyState >= 2) play();
-    else { video.load(); video.addEventListener('canplay', play, {once:true}); setTimeout(play, 1500); }
-    /* el video se corta en 2.4 s (antes de que aparezca el segundo sello) y funde al color de la invitación */
-    video.addEventListener('timeupdate', function(){ if (video.currentTime >= 1.95) finish(); });
-    video.addEventListener('ended', finish, {once:true});
-    setTimeout(finish, 5000);
+    gsap.to(tap, {opacity:0, duration:.25});
+    setTimeout(finish, 350);
   }
   screen.addEventListener('click', onTap, {passive:false});
   screen.addEventListener('touchstart', onTap, {passive:false});
@@ -3965,19 +3927,12 @@ function bootInvitation(){
   requestAnimationFrame(() => {
     {
       {
-        addSectionWaves();
-        addSectionMedals();
-        addCorners();
-        addWindOrns();
-        addAuras();
         heroAnim();
         scrollAnims();
         countdown();
         setInterval(countdown, 1000);
-        ambientWind();
         initMenu();
         initSectionFades();
-        initHeroDust();
         initAutoScroll();
         initHospedaje();
         initVida();
@@ -3985,7 +3940,6 @@ function bootInvitation(){
         initGiftsPA();
         initPadrinos();
         setTimeout(function(){ if(window.paShowMusicBtn) paShowMusicBtn(); }, 700);
-        initPetals();
       }
     }
   });
@@ -5264,7 +5218,7 @@ function initAutoScroll(){
    }]
    VENUES = [{ t:'Recepción', ico:'♥', nombre:'…', dir:'…', lat, lng, maps:'…' }, { t:'Ceremonia', ico:'✝', … }]
    (Datos de abajo = los que ya tenía el destino; faltan fotos[] y ruta[]. Sustituir cuando lleguen.) */
-var HOTELS = [{"n": "Candlewood Suites Guadalajara Galerias, an IHG Hotel", "tipo": "Hotel", "dir": "Av. Manuel J. Clouthier 253, Int. 70, Zapopan", "lat": 20.6713506, "lng": -103.4167582, "fotos": ["hoteles/candlewood-1.jpg", "hoteles/candlewood-2.jpg", "hoteles/candlewood-3.jpg", "hoteles/candlewood-4.jpg"], "maps": "https://www.google.com/maps/place/Candlewood+Suites+Guadalajara+Galerias,+an+IHG+Hotel/@20.6713506,-103.4167582,17z/data=!3m1!4b1!4m6!3m5!1s0x8428af2ef2f2c2e1:0xca76151ddaad7af2!8m2!3d20.6713506!4d-103.4167582", "web": "https://www.ihg.com/candlewood/hotels/us/es/zapopan/gdlzp/hoteldetail", "km": 3.8, "min": 7, "minCeremonia": null, "ruta": [[20.67111, -103.41689], [20.67111, -103.41771], [20.67183, -103.41741], [20.67221, -103.41725], [20.67246, -103.41715], [20.67246, -103.41733], [20.67246, -103.41755], [20.67312, -103.41811], [20.67365, -103.41856], [20.67419, -103.41902], [20.67471, -103.41947], [20.67626, -103.42078], [20.67724, -103.42161], [20.67727, -103.42164], [20.6773, -103.42168], [20.67733, -103.42183], [20.67801, -103.42169], [20.67851, -103.42158], [20.67877, -103.42152], [20.679, -103.42148], [20.67904, -103.42169], [20.67911, -103.422], [20.67912, -103.42207], [20.67953, -103.42392], [20.6796, -103.42425], [20.67964, -103.42445], [20.67982, -103.4253], [20.67996, -103.42594], [20.68008, -103.42685], [20.6803, -103.42789], [20.68058, -103.42919], [20.68073, -103.42993], [20.6808, -103.43023], [20.68131, -103.43265], [20.68179, -103.4349], [20.68193, -103.43563], [20.68253, -103.43834], [20.68272, -103.43864], [20.68282, -103.43892], [20.68295, -103.43918], [20.68305, -103.43936], [20.68316, -103.43951], [20.68329, -103.43969], [20.68336, -103.43978], [20.68377, -103.44029], [20.68467, -103.44146], [20.68516, -103.4421], [20.68566, -103.44272], [20.68599, -103.44315], [20.68608, -103.44325], [20.68611, -103.44329], [20.68614, -103.44333], [20.68634, -103.44357], [20.68636, -103.4436], [20.68647, -103.44374], [20.68666, -103.44399], [20.6868, -103.44416]]}];
+var HOTELS = [{"n": "Candlewood Suites Guadalajara Galerias, an IHG Hotel", "tipo": "Hotel", "dir": "Av. Manuel J. Clouthier 253, Int. 70, Zapopan", "lat": 20.6713506, "lng": -103.4167582, "fotos": ["hoteles/candlewood-1.jpg"], "maps": "https://www.google.com/maps/place/Candlewood+Suites+Guadalajara+Galerias,+an+IHG+Hotel/@20.6713506,-103.4167582,17z/data=!3m1!4b1!4m6!3m5!1s0x8428af2ef2f2c2e1:0xca76151ddaad7af2!8m2!3d20.6713506!4d-103.4167582", "web": "https://www.ihg.com/candlewood/hotels/us/es/zapopan/gdlzp/hoteldetail", "km": 3.8, "min": 7, "minCeremonia": null, "ruta": [[20.67111, -103.41689], [20.67111, -103.41771], [20.67183, -103.41741], [20.67221, -103.41725], [20.67246, -103.41715], [20.67246, -103.41733], [20.67246, -103.41755], [20.67312, -103.41811], [20.67365, -103.41856], [20.67419, -103.41902], [20.67471, -103.41947], [20.67626, -103.42078], [20.67724, -103.42161], [20.67727, -103.42164], [20.6773, -103.42168], [20.67733, -103.42183], [20.67801, -103.42169], [20.67851, -103.42158], [20.67877, -103.42152], [20.679, -103.42148], [20.67904, -103.42169], [20.67911, -103.422], [20.67912, -103.42207], [20.67953, -103.42392], [20.6796, -103.42425], [20.67964, -103.42445], [20.67982, -103.4253], [20.67996, -103.42594], [20.68008, -103.42685], [20.6803, -103.42789], [20.68058, -103.42919], [20.68073, -103.42993], [20.6808, -103.43023], [20.68131, -103.43265], [20.68179, -103.4349], [20.68193, -103.43563], [20.68253, -103.43834], [20.68272, -103.43864], [20.68282, -103.43892], [20.68295, -103.43918], [20.68305, -103.43936], [20.68316, -103.43951], [20.68329, -103.43969], [20.68336, -103.43978], [20.68377, -103.44029], [20.68467, -103.44146], [20.68516, -103.4421], [20.68566, -103.44272], [20.68599, -103.44315], [20.68608, -103.44325], [20.68611, -103.44329], [20.68614, -103.44333], [20.68634, -103.44357], [20.68636, -103.4436], [20.68647, -103.44374], [20.68666, -103.44399], [20.6868, -103.44416]]}];
 var VENUES = [
   { t:'Recepción', ico:'♥', nombre:'La Macarena Salón Boutique', dir:'Av. Ignacio L. Vallarta 6112, Zapopan', lat:20.6868805, lng:-103.44409, maps:'https://www.google.com/maps/place/La+Macarena+Sal%C3%B3n+Boutique/@20.6868855,-103.4466649,17z/data=!3m1!4b1!4m6!3m5!1s0x8428aec9495dd6d1:0x6b1cb56b8315ca54!8m2!3d20.6868805!4d-103.44409' }
 ];
@@ -5927,26 +5881,6 @@ function initPadrinos(){
 })();
 </script>
 
-<script>
-/* GALERÍA · revelado con clip-path y parallax a distintas velocidades */
-(function(){
-  function go(){
-    if(!window.gsap || !window.ScrollTrigger) return;
-    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var items = document.querySelectorAll('#galeria .gal-it');
-    items.forEach(function(it, k){
-      var box = it.querySelector('.gal-in'), img = it.querySelector('img');
-      if(!reduced){
-        gsap.fromTo(box, {clipPath:'inset(0 0 100% 0)'}, {clipPath:'inset(0 0 0% 0)', duration:1.1, ease:'power2.out',
-          scrollTrigger:{trigger:it, start:'top 88%', once:true}});
-        gsap.fromTo(img, {yPercent:-5, scale:1.12}, {yPercent:5 + (k % 3) * 2, scale:1.08, ease:'none',
-          scrollTrigger:{trigger:it, start:'top bottom', end:'bottom top', scrub:true}});
-      }
-    });
-  }
-  if(document.readyState === 'complete') go(); else window.addEventListener('load', go);
-})();
-</script>
 </body>
 </html>
 
