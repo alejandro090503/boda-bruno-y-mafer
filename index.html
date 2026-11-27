@@ -3091,62 +3091,6 @@ body > footer{padding-bottom:120px !important}
 
 .pa-hs-mk-h,.pa-hs-mk-v{transition:translate .35s ease}
 
-/* ═════════ DRESS CODE · botones "Ver ideas" + carrusel (de boda-fabiola-y-fernando, repintado salvia/champán) ═════════ */
-.dc-looks{display:flex;flex-direction:column;gap:12px;max-width:380px;margin:8px auto 34px}
-.dc-look{display:flex;align-items:center;gap:14px;width:100%;padding:14px 16px;cursor:pointer;border-radius:14px;text-align:left;
-  border:1px solid rgba(160,137,123,.55);background:linear-gradient(120deg,#FFFDF9 0%,var(--paper,#F4EFE9) 100%);
-  box-shadow:0 10px 24px rgba(70,85,66,.12);
-  transition:transform .22s cubic-bezier(.34,1.56,.64,1),border-color .22s,box-shadow .22s;
-  -webkit-tap-highlight-color:transparent;animation:dcLookBreathe 3.4s ease-in-out infinite}
-.dc-looks .dc-look:nth-child(2){animation-delay:1.7s}
-@keyframes dcLookBreathe{
-  0%,100%{box-shadow:0 10px 24px rgba(70,85,66,.12),0 0 0 0 rgba(160,137,123,0)}
-  50%{box-shadow:0 10px 24px rgba(70,85,66,.12),0 0 20px 2px rgba(160,137,123,.32)}}
-.dc-look:hover,.dc-look:focus-visible{transform:translateY(-3px);border-color:var(--gold,#8E7B70);outline:none}
-.dc-look:active{transform:translateY(-1px) scale(.985)}
-.dc-look-ico{flex:0 0 auto;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;
-  background:linear-gradient(140deg,#8A9887,var(--olive,#465542) 60%,#34402F);
-  box-shadow:0 4px 12px rgba(70,85,66,.35),inset 0 1px 0 rgba(255,255,255,.35)}
-.dc-look-ico svg{width:24px;height:24px}
-.dc-look-txt{display:flex;flex-direction:column;gap:2px;flex:1}
-.dc-look-rol{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:23px;color:var(--olive,#465542);line-height:1.15}
-.dc-look-cta{font-family:'Lato',sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep,#65534A)}
-.dc-look-arrow{flex:0 0 auto;width:22px;height:22px;color:var(--gold-deep,#65534A);animation:dcArrowNudge 1.9s ease-in-out infinite}
-.dc-look-arrow svg{width:100%;height:100%}
-@keyframes dcArrowNudge{0%,100%{transform:translateX(0);opacity:.6}50%{transform:translateX(4px);opacity:1}}
-.dc-viewer{position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;padding:16px;
-  background:rgba(40,48,38,.55);opacity:0;transition:opacity .28s ease}
-.dc-viewer.on{opacity:1}
-.dc-viewer[hidden]{display:none !important}
-.dc-viewer:not(.on){pointer-events:none}
-.dcv-box{position:relative;width:min(92vw,440px);border-radius:20px;overflow:hidden;background:var(--paper,#F4EFE9);
-  border:1px solid rgba(160,137,123,.6);box-shadow:0 26px 70px rgba(30,36,28,.45);padding:18px 0 16px}
-.dcv-head{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:24px;color:var(--olive,#465542);text-align:center;margin:0 56px 14px}
-.dcv-viewport{overflow:hidden}
-.dcv-track{display:flex;transition:transform .42s cubic-bezier(.25,.8,.25,1);touch-action:pan-y}
-.dcv-slide{flex:0 0 100%;margin:0;display:flex;justify-content:center;padding:0 40px}
-.dcv-frame{position:relative;width:100%;max-width:300px;height:min(56vh,440px);padding:14px;border-radius:6px;
-  background:linear-gradient(145deg,#E6DAD2 0%,#8E7B70 30%,#E4D8D0 52%,#85726A 74%,#E3D6CD 100%);
-  box-shadow:0 14px 30px rgba(30,36,28,.28),inset 0 0 0 1px rgba(255,255,255,.55),inset 0 0 0 4px rgba(70,85,66,.18)}
-.dcv-mat{position:relative;height:100%;border-radius:3px;display:flex;align-items:flex-end;justify-content:center;padding:20px 18px 14px;
-  background:radial-gradient(ellipse 72% 58% at 50% 62%,#FFFFFF 0%,#F8F4EE 62%,#EDE1D3 100%);
-  box-shadow:inset 0 0 0 1px rgba(70,85,66,.28),inset 0 0 0 7px #F8F4EE,inset 0 0 0 8px rgba(160,137,123,.55),inset 0 3px 10px rgba(30,36,28,.16)}
-.dcv-mat img{max-height:100%;max-width:100%;object-fit:contain;display:block;filter:drop-shadow(0 6px 10px rgba(30,36,28,.2))}
-.dcv-frame::before,.dcv-frame::after{content:'';position:absolute;width:18px;height:18px;border:1.5px solid var(--gold-deep,#65534A);opacity:.55;pointer-events:none}
-.dcv-frame::before{top:6px;left:6px;border-right:none;border-bottom:none}
-.dcv-frame::after{bottom:6px;right:6px;border-left:none;border-top:none}
-.dcv-cap{margin:14px 16px 8px;text-align:center;font-family:'Lato',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--olive,#465542)}
-.dcv-dots{display:flex;justify-content:center;gap:9px}
-.dcv-dot{width:9px;height:9px;border-radius:50%;padding:0;cursor:pointer;border:1px solid var(--olive,#465542);background:transparent;transition:transform .2s,background .2s}
-.dcv-dot.on{background:var(--olive,#465542);transform:scale(1.25)}
-.dcv-nav,.dc-viewer-close{position:absolute;z-index:3;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;border:none;
-  background:linear-gradient(140deg,#8A9887,var(--olive,#465542) 60%,#34402F);box-shadow:0 6px 16px rgba(30,36,28,.35)}
-.dcv-nav{top:50%;transform:translateY(-50%)}
-.dcv-nav svg{width:20px;height:20px}
-.dcv-prev{left:4px}.dcv-next{right:4px}
-.dc-viewer-close{top:10px;right:10px;z-index:4}
-.dc-viewer-close svg{width:18px;height:18px}
-@media (prefers-reduced-motion:reduce){.dc-look,.dc-look-arrow{animation:none}}
 .pa-dc-sws.pa-dc-one{grid-template-columns:repeat(2,minmax(0,1fr));max-width:260px}
 /* nota del itinerario y padrinos pendientes */
 .tl-lugar{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:19px;line-height:1.5;
@@ -3163,7 +3107,7 @@ body > footer{padding-bottom:120px !important}
 :root{--f-serif:'Cormorant Garamond',serif;--f-sans:'Lato',sans-serif}
 body,body *{font-style:normal !important;font-variant-numeric:lining-nums tabular-nums !important;font-feature-settings:"lnum" 1,"tnum" 1 !important;font-synthesis:none}
 body,body *{font-weight:500 !important}
-.lbl,.btn,.pa-dc-sub,.fam-col-role,.gf-go,.dc-look-cta,.env-tap,.cv-date,.h-date,.h-we,.ft-dt,.fs-hint,.rsvp-notice-lbl,.pa-hs-type,.rsvp-pases-label,.tl-t,.loc-dual-type{font-family:var(--f-sans) !important;font-weight:700 !important}
+.lbl,.btn,.pa-dc-sub,.fam-col-role,.gf-go,.dc-look-cta,.env-tap,.cv-date,.h-date,.h-we,.ft-dt,.fs-hint,.rsvp-notice-lbl,.pa-hs-type,.rsvp-pases-label,.tl-t,.loc-dual-type{font-family:var(--f-sans) !important;font-weight:500 !important}
 body{background:#F4EFE9 !important}
 .ink-bg,.sec-wave,.sec-medal,.h-particles,.hero-fx,.hf-dust,.hf-glow,.hf-sweep,#petals,.h-frame,.hf-vig{display:none !important}
 .foil-text,.foil-text *{background:none !important;-webkit-text-fill-color:currentColor !important;animation:none !important;text-shadow:none !important}
@@ -3236,16 +3180,51 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 .cv-date{margin-top:8px !important}
 .cv-rule{display:none}
 .cv-lang,.mn-lang{display:flex;gap:8px;justify-content:center;margin-top:14px}
-.lang-btn{font-family:'Lato',sans-serif;font-weight:700 !important;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:9px 16px;min-height:40px;border-radius:50px;
+.lang-btn{font-family:'Lato',sans-serif;font-weight:500 !important;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:9px 16px;min-height:40px;border-radius:50px;
   border:1px solid #65534A;background:transparent;color:#65534A;cursor:pointer}
 .lang-btn.on{background:#65534A;color:#F4EFE9}
-#envelope-screen .env-tap{margin-top:16px !important;padding:14px 34px !important;border-radius:50px !important;background:#2F3A2C !important;color:#F4EFE9 !important;font-size:11.5px !important;letter-spacing:.24em !important;text-transform:uppercase;animation:none !important;opacity:1 !important}
+#envelope-screen .env-tap{margin-top:16px !important;padding:14px 34px !important;border-radius:50px !important;background:#2F3A2C !important;color:#F4EFE9 !important;font-size:11.5px !important;letter-spacing:.24em !important;text-transform:uppercase}
 .mn-lang{margin-top:6px}
 .mn-lang .lang-btn{color:#65534A}
 /* iconos del itinerario */
 .tl-ic{display:block;color:#65534A;margin:0 0 4px}
 .tl-ic svg{width:24px;height:24px;display:block}
 .tl-row[data-side="right"] .tl-ic svg{margin-left:auto}
+
+/* ═════════ FIRMA · monograma prensado en el papel + luz lateral neutra (Spotlight) ═════════ */
+.cv-in{background:#F4EFE9}
+.cv-press{position:relative;display:inline-block;padding:6px 26px;margin-top:18px;isolation:isolate}
+.cv-mono{margin:0 !important;color:#DCCFC0 !important;
+  text-shadow:-1px -1px 0 rgba(101,83,74,.7),1px 1px 0 rgba(255,255,255,.95),0 0 1px rgba(101,83,74,.3) !important}
+.cv-mono span{color:#DCCFC0 !important}
+.cv-spot{position:absolute;top:-40%;bottom:-40%;left:-45%;width:70%;pointer-events:none;z-index:2;mix-blend-mode:soft-light;
+  background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,255,255,1),rgba(255,255,255,.45) 40%,rgba(255,255,255,0) 70%);
+  opacity:0;animation:cvSpot 3.2s cubic-bezier(.45,.05,.35,1) .35s 1 forwards}
+@keyframes cvSpot{0%{transform:translateX(0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(250%);opacity:0}}
+#envelope-screen .cv-in .cv-names,#envelope-screen .cv-in .cv-date,#envelope-screen .cv-in .cv-lang,#envelope-screen .cv-in .env-tap{opacity:0;animation:cvFade .9s ease-out 2.6s forwards !important}
+#envelope-screen .cv-in .cv-date{animation-delay:2.8s !important}#envelope-screen .cv-in .cv-lang{animation-delay:3s !important}#envelope-screen .cv-in .env-tap{animation-delay:3.2s !important}
+@keyframes cvFade{from{opacity:0}to{opacity:1}}
+#envelope-screen.cv-leave{transition:opacity .8s ease,transform .8s ease;transform:scale(1.02)}
+@media (prefers-reduced-motion:reduce){.cv-spot{display:none}#envelope-screen .cv-in .cv-names,#envelope-screen .cv-in .cv-date,#envelope-screen .cv-in .cv-lang,#envelope-screen .cv-in .env-tap{animation:none !important;opacity:1 !important}}
+/* tarjetas: filo fino salvia, sin vidrio */
+.loc-card,.story-card,.gf-card,.rsvp-card,.rsvp-notice,.fam-grid,.fam-god,.pa-hs-card,.cal-card{border:1px solid #BFC4B3 !important;box-shadow:0 6px 18px rgba(70,85,66,.06) !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important}
+.gf-card::before,.gf-card.sheen::after{display:none !important}
+@keyframes levitate{0%,100%{translate:0 0;rotate:0deg}50%{translate:0 -4px;rotate:0deg}}
+/* itinerario: línea fina café, sin estela ni perla */
+.tl-svg-halo,.tl-svg-beam,.tl-svg-core,.tl-pearl{display:none !important}
+.tl-svg-path{stroke:#65534A !important;stroke-width:1.2 !important;filter:none !important}
+.tl-pulse{display:none !important}
+/* fondo crema con manchas muy tenues */
+body::before{content:'';position:fixed;inset:0;z-index:-5;pointer-events:none;
+  background:radial-gradient(60vmax 40vmax at 12% 18%,rgba(138,152,135,.10),transparent 70%),radial-gradient(55vmax 40vmax at 88% 78%,rgba(222,202,177,.18),transparent 70%)}
+#family,#footer{position:relative;overflow:hidden}
+#family::before,#footer::before{content:'';position:absolute;z-index:0;pointer-events:none;width:240px;height:430px;background:url(botanica3.webp) center/contain no-repeat;opacity:.22;filter:blur(2.5px)}
+#family::before{right:-90px;top:20px}
+#footer::before{left:-100px;bottom:-40px;transform:scaleX(-1)}
+#family > *,#footer > *{position:relative;z-index:1}
+/* fotos: solo fundido al entrar */
+.js-fade{opacity:0;transition:opacity .9s ease}
+.js-fade.in{opacity:1}
 </style>
 </head>
 <body>
@@ -3290,7 +3269,7 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 <div id="envelope-screen">
   <div class="cv-photo" role="img" aria-label="Bruno y Mafer caminando de la mano"></div>
   <div class="cv-in">
-    <p class="cv-mono">B <span>&amp;</span> M</p>
+    <div class="cv-press"><p class="cv-mono" aria-label="B y M">B <span>&amp;</span> M</p><span class="cv-spot" aria-hidden="true"></span></div>
     <p class="cv-names">Bruno y Mafer</p>
     <p class="cv-date">27 · Febrero · 2027</p>
     <div class="cv-lang" role="group" aria-label="Idioma / Language">
@@ -3339,16 +3318,8 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
     <i class="hero-drift" id="heroPic" style="background-image:url('botanica2.webp')"></i>
   </div>
   <div class="h-ov"></div>
-  <div class="hero-fx" aria-hidden="true">
-    <span class="hf-glow g1"></span><span class="hf-glow g2"></span><span class="hf-glow g3"></span><span class="hf-glow g4"></span>
-    <span class="hf-sweep"></span>
-    <div class="hf-dust" id="hfDust"></div>
-    <span class="hf-vig"></span>
-  </div>
-  <div class="h-frame"></div>
 
 
-  <div class="h-particles" id="hPart"></div>
 
   <div class="h-cnt" id="hCnt">
     <p class="h-we" id="hWe">Nos casamos</p>
@@ -3359,13 +3330,13 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 
     <div class="h-name-wrap">
       <span class="h-name-wind-line"></span>
-      <div class="h-clip"><span class="h-name h-name-wind foil-text" id="hN1">Bruno</span></div>
+      <div class="h-clip"><span class="h-name h-name-wind" id="hN1">Bruno</span></div>
       <span class="h-name-wind-line"></span>
     </div>
-    <div class="h-amp-clip"><span class="h-amp foil-text foil-gold" id="hAmp">&amp;</span></div>
+    <div class="h-amp-clip"><span class="h-amp" id="hAmp">&amp;</span></div>
     <div class="h-name-wrap">
       <span class="h-name-wind-line"></span>
-      <div class="h-clip"><span class="h-name h-name-wind foil-text" id="hN2">Mafer</span></div>
+      <div class="h-clip"><span class="h-name h-name-wind" id="hN2">Mafer</span></div>
       <span class="h-name-wind-line"></span>
     </div>
 
@@ -3391,9 +3362,8 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 
 <!-- ═══════════════ 1b. NOSOTROS ═════════════════════ -->
 <section id="story">
-  <div class="ink-bg ink-v1" aria-hidden="true"><i style="background-image:url(ink/ink-top.webp)"></i></div>
   <span class="lbl">Bruno &amp; Mafer</span>
-  <h2 class="ttl foil-text">Nuestra <span class="ttl-script">historia</span></h2>
+  <h2 class="ttl">Nuestra historia</h2>
   <div class="gline"></div>
 
   <figure class="story-photo" id="storyPhoto">
@@ -3418,7 +3388,7 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 <!-- ═══════════════ 2. CUENTA REGRESIVA ══════════════ -->
 <section id="countdown">
   <span class="lbl">El gran día llega en</span>
-  <h2 class="ttl foil-text">Cuenta <span class="ttl-script">regresiva</span></h2>
+  <h2 class="ttl">Cuenta regresiva</h2>
   <div class="gline"></div>
 
   <div class="cd-ring-grid">
@@ -3476,9 +3446,8 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 
 <!-- ═══════════════ 3. UBICACIONES ═══════════════════ -->
 <section id="location">
-  <div class="ink-bg ink-v3" aria-hidden="true"><i style="background-image:url(ink/ink-hero.webp)"></i></div>
   <span class="lbl">¿Dónde y cuándo?</span>
-  <h2 class="ttl foil-text">La <span class="ttl-script">celebración</span></h2>
+  <h2 class="ttl">La celebración</h2>
   <div class="gline"></div>
   <p class="loc-city-sub">Guadalajara · Jalisco</p>
 
@@ -3506,7 +3475,7 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 <!-- ═══════════════ 4. CALENDARIO ════════════════════ -->
 <section id="calendar">
   <span class="lbl">No lo olvides</span>
-  <h2 class="ttl foil-text">Reserva la <span class="ttl-script">fecha</span></h2>
+  <h2 class="ttl">Reserva la fecha</h2>
   <div class="gline"></div>
 
   <div class="cal-card" id="calCard">
@@ -3531,9 +3500,8 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 
 <!-- ═══════════════ 5. ITINERARIO ════════════════════ -->
 <section id="itinerary">
-  <div class="ink-bg ink-v4 ink-flip" aria-hidden="true"><i style="background-image:url(ink/ink-top.webp)"></i></div>
   <span class="lbl">El día de la boda</span>
-  <h2 class="ttl foil-text">Itinerario</h2>
+  <h2 class="ttl">Itinerario</h2>
   <div class="gline"></div>
   <p class="tl-lugar">Todo sera en el mismo lugar &nbsp;–&nbsp; La Macarena Salón Boutique</p>
   <div class="timeline" id="tlWrap">
@@ -3587,9 +3555,8 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 
 <!-- ═══════════════ 6. FAMILIA ══════════════════════ -->
 <section id="family">
-  <div class="ink-bg ink-v2 ink-flip" aria-hidden="true"><i style="background-image:url(ink/ink-corner.webp)"></i></div>
   <span class="lbl">Con el amor</span>
-  <h2 class="ttl foil-text">de nuestras <span class="ttl-script">familias</span></h2>
+  <h2 class="ttl">de nuestras familias</h2>
   <div class="gline"></div>
 
   <div class="fam-grid">
@@ -3612,38 +3579,9 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 
 <!-- ═══════════════ 7. CÓDIGO DE VESTIMENTA ═════════ -->
 <section id="dresscode" class="pa-dc" aria-label="Código de vestimenta">
-  <div class="ink-bg ink-v1 ink-flip" aria-hidden="true"><i style="background-image:url(ink/ink-hero.webp)"></i></div>
   <span class="lbl">Código de vestimenta</span>
-  <h2 class="ttl foil-text">Formal con tenis</h2>
+  <h2 class="ttl">Formal con tenis</h2>
   <div class="gline"></div>
-  <div class="dc-looks">
-    <button class="dc-look" type="button" data-look="caballeros" aria-label="Ver ideas de vestimenta para caballeros">
-      <span class="dc-look-ico" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l4 3 4-3 3 2.2c1.2.9 1.9 2.3 1.9 3.8V21H3V9c0-1.5.7-2.9 1.9-3.8L8 3z"/><path d="M12 6v15"/><path d="M9.4 4.2L12 9l2.6-4.8"/></svg>
-      </span>
-      <span class="dc-look-txt"><span class="dc-look-rol">Caballeros</span><span class="dc-look-cta">Ver ideas</span></span>
-      <span class="dc-look-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
-    </button>
-    <button class="dc-look" type="button" data-look="damas" aria-label="Ver ideas de vestimenta para damas">
-      <span class="dc-look-ico" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l-1.4 5.2L21 21H3l7.4-12.8L9 3z"/><path d="M10.6 8.2h2.8"/></svg>
-      </span>
-      <span class="dc-look-txt"><span class="dc-look-rol">Damas</span><span class="dc-look-cta">Ver ideas</span></span>
-      <span class="dc-look-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
-    </button>
-  </div>
-
-  <div class="dc-viewer" id="dcViewer" role="dialog" aria-modal="true" aria-label="Ideas de vestimenta" hidden>
-    <div class="dcv-box">
-      <button class="dc-viewer-close" id="dcViewerClose" type="button" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-      <p class="dcv-head" id="dcvHead"></p>
-      <div class="dcv-viewport"><div class="dcv-track" id="dcvTrack"></div></div>
-      <button class="dcv-nav dcv-prev" id="dcvPrev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
-      <button class="dcv-nav dcv-next" id="dcvNext" type="button" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
-      <p class="dcv-cap" id="dcvCap"></p>
-      <div class="dcv-dots" id="dcvDots"></div>
-    </div>
-  </div>
 
   <div class="pa-dc-block">
     <p class="pa-dc-sub">Colores a evitar</p>
@@ -3660,7 +3598,7 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 <!-- ═══════════════ 8. HOSPEDAJE ═══════════════════ -->
 <section id="hospedaje" class="pa-hs">
   <span class="lbl">Para tu estancia</span>
-  <h2 class="ttl foil-text">Hospedaje <span class="ttl-script">sugerido</span></h2>
+  <h2 class="ttl">Hospedaje sugerido</h2>
   <div class="gline"></div>
   <p class="pa-hs-sub">Quédate cerca de la recepción</p>
 
@@ -3728,10 +3666,10 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
   <div class="fs-wrap">
     <button type="button" class="fs-arrow fs-prev" id="fsPrev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
     <div class="fs-track" id="fsTrack" tabindex="0" aria-label="Fotos de Bruno y Mafer">
-      <figure class="fs-slide"><img src="fotos/foto02.jpg" alt="Beso al atardecer" width="900" height="1350" loading="lazy" decoding="async"></figure>
-      <figure class="fs-slide"><img src="fotos/foto04.jpg" alt="Abrazo en blanco y negro" width="900" height="1350" loading="lazy" decoding="async"></figure>
-      <figure class="fs-slide"><img src="fotos/foto08.jpg" alt="Luz de atardecer junto al muro" width="900" height="1350" loading="lazy" decoding="async"></figure>
-      <figure class="fs-slide"><img src="fotos/foto12.jpg" alt="Bruno y Mafer frente a frente" width="900" height="1350" loading="lazy" decoding="async"></figure>
+      <figure class="fs-slide"><img src="fotos/foto02.jpg" alt="Beso al atardecer" width="900" height="1350" decoding="async"></figure>
+      <figure class="fs-slide"><img src="fotos/foto04.jpg" alt="Abrazo en blanco y negro" width="900" height="1350" decoding="async"></figure>
+      <figure class="fs-slide"><img src="fotos/foto08.jpg" alt="Luz de atardecer junto al muro" width="900" height="1350" decoding="async"></figure>
+      <figure class="fs-slide"><img src="fotos/foto12.jpg" alt="Bruno y Mafer frente a frente" width="900" height="1350" decoding="async"></figure>
     </div>
     <button type="button" class="fs-arrow fs-next" id="fsNext" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
   </div>
@@ -3741,12 +3679,10 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 
 <!-- ═══════════════ 9. MESA DE REGALOS ═══════════════ -->
 <section id="gifts" class="pa-gf">
-  <div class="ink-bg ink-v2" aria-hidden="true"><i style="background-image:url(ink/ink-oval.webp)"></i></div>
-  <div class="pa-gf-rain" id="paGfRain" aria-hidden="true"></div>
 
   <div class="pa-gf-stage">
     <span class="lbl">Con cariño</span>
-    <h2 class="ttl foil-text">Mesa de <span class="ttl-script">regalos</span></h2>
+    <h2 class="ttl">Mesa de regalos</h2>
     <div class="gline"></div>
 
     <div class="pa-gf-plain">
@@ -3772,9 +3708,8 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 
 <!-- ═══════════════ 10. ÁLBUM COMPARTIDO ══════════════ -->
 <section id="album">
-  <div class="ink-bg ink-v3" aria-hidden="true"><i style="background-image:url(ink/ink-corner.webp)"></i></div>
   <span class="lbl">Comparte tus momentos</span>
-  <h2 class="ttl foil-text">Álbum de <span class="ttl-script">fotos</span></h2>
+  <h2 class="ttl">Álbum de fotos</h2>
   <div class="gline"></div>
   <p class="alb-sub">Ayúdanos a guardar cada momento: sube aquí las fotos que tomes durante el evento.</p>
 
@@ -3805,14 +3740,13 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 
 <!-- ═══════════════ 11. RSVP ═════════════════════════ -->
 <section id="rsvp">
-  <div class="ink-bg ink-v4 ink-flip" aria-hidden="true"><i style="background-image:url(ink/ink-footer.webp)"></i></div>
   <span class="lbl">Confirmación de asistencia</span>
-  <h2 class="ttl foil-text">¿Nos <span class="ttl-script">acompañas?</span></h2>
+  <h2 class="ttl">¿Nos acompañas?</h2>
   <div class="gline"></div>
 
   <div class="rsvp-notice">
     <span class="rsvp-notice-lbl">Aviso especial</span>
-    <p class="rsvp-notice-ttl">Evento solo para <span class="rsvp-notice-script">adultos</span></p>
+    <p class="rsvp-notice-ttl">Evento solo para adultos</p>
     <p class="rsvp-notice-msg">
       Con todo nuestro cariño hemos pensado esta celebración para adultos.
       Sabemos que amas a tus pequeños tanto como nosotros, y por eso te
@@ -3839,7 +3773,7 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
         </g>
       </svg>
 
-      <h3 class="rsvp-title">Tu presencia lo <em>es todo</em></h3>
+      <h3 class="rsvp-title">Tu presencia lo es todo</h3>
       <p class="rsvp-text">Confírmanos tu asistencia antes del <strong>8 de enero de 2027</strong>. Nos hará muy felices saber que estarás con nosotros.</p>
 
       <div class="rsvp-para" id="rsvpParaWrap" style="display:none">
@@ -3922,7 +3856,7 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 <!-- ═══════════════ NUESTRA HISTORIA (mosaico, como la plantilla 57) ═══════════════ -->
 <section id="recuerdos">
   <span class="lbl">Momentos</span>
-  <h2 class="ttl">Nuestra historia</h2>
+  <h2 class="ttl">Recuerdos</h2>
   <div class="gline"></div>
   <p class="gal-sub">Algunos de nuestros recuerdos juntos</p>
   <div class="mo-grid">
@@ -3935,7 +3869,7 @@ p,li,.tl-ev,.fam-n,.loc-addr{color:#26302A}
 <!-- ═══════════════ 12. FOOTER ═══════════════════════ -->
 <footer id="footer">
   <div class="ft-orn">✦ · ✦ · ✦</div>
-  <div class="ft-nms foil-text">Bruno &amp; Mafer</div>
+  <div class="ft-nms">Bruno &amp; Mafer</div>
   <div class="gline" style="margin-top:22px"></div>
   <p class="ft-dt">27 · Febrero · 2027</p>
   <p class="ft-note">Guadalajara · Jalisco<br>Con amor, los novios</p>
@@ -3966,12 +3900,11 @@ function initEnvelope(){
   const tap    = document.getElementById('envTap');
   if (!screen) { bootInvitation(); return; }
   let tapped = false, finished = false;
-  gsap.fromTo('.cv-in > *', {opacity:0, y:14}, {opacity:1, y:0, duration:.9, stagger:.18, ease:'power2.out', clearProps:'transform'});
 
   function finish(){
     if (finished) return; finished = true;
     document.body.classList.remove('env-locked');
-    gsap.to(screen, {opacity:0, duration:.8, ease:'power2.inOut', onComplete(){
+    gsap.to(screen, {opacity:0, scale:1.02, duration:.8, ease:'power2.inOut', onComplete(){
       screen.style.display = 'none';
       bootInvitation();
     }});
@@ -5877,77 +5810,6 @@ function initPadrinos(){
 }
 </script>
 
-<script>
-/* DRESS CODE · visor "Ver ideas" (de boda-fabiola-y-fernando) */
-(function(){
-  function init(){
-    var viewer = document.getElementById('dcViewer');
-    if(!viewer) return;
-    if(viewer.parentNode !== document.body) document.body.appendChild(viewer);
-    var track = document.getElementById('dcvTrack'), head = document.getElementById('dcvHead'),
-        cap = document.getElementById('dcvCap'), dots = document.getElementById('dcvDots'),
-        close = document.getElementById('dcViewerClose');
-    var LOOKS = {
-      caballeros:{head:'Caballeros', items:[
-        {src:'looks/cab-1.png', cap:'Chaleco y pantalón de vestir'},
-        {src:'looks/cab-2.png', cap:'Traje en tono arena'},
-        {src:'looks/cab-3.png', cap:'Traje oscuro'}]},
-      damas:{head:'Damas', items:[
-        {src:'looks/dama-1.png', cap:'Vestido largo claro'},
-        {src:'looks/dama-2.png', cap:'Vestido marino'},
-        {src:'looks/dama-3.png', cap:'Vestido champagne'}]}
-    };
-    var items = [], idx = 0, last = null;
-    function render(){
-      track.style.transform = 'translateX(' + (-idx*100) + '%)';
-      cap.textContent = items[idx].cap + '  ·  ' + (idx+1) + ' / ' + items.length;
-      [].forEach.call(dots.children, function(d,i){ d.classList.toggle('on', i===idx); });
-    }
-    function go(i){ idx = (i + items.length) % items.length; render(); }
-    function open(key){
-      var L = LOOKS[key]; if(!L) return;
-      items = L.items; idx = 0; last = document.activeElement;
-      head.textContent = L.head; track.innerHTML = ''; dots.innerHTML = '';
-      items.forEach(function(it,i){
-        var sl = document.createElement('figure'); sl.className = 'dcv-slide';
-        sl.innerHTML = '<div class="dcv-frame"><div class="dcv-mat"><img alt=""></div></div>';
-        var im = sl.querySelector('img'); im.src = it.src; im.alt = L.head + ' — ' + it.cap;
-        track.appendChild(sl);
-        var d = document.createElement('button'); d.type='button'; d.className='dcv-dot';
-        d.setAttribute('aria-label','Ver idea '+(i+1));
-        d.addEventListener('click', function(){ go(i); }); dots.appendChild(d);
-      });
-      render();
-      viewer.removeAttribute('hidden'); viewer.classList.add('on');
-      document.body.style.overflow = 'hidden'; close.focus();
-    }
-    function hide(){
-      viewer.classList.remove('on'); document.body.style.overflow = '';
-      setTimeout(function(){ viewer.setAttribute('hidden',''); }, 300);
-      if(last && last.focus) last.focus();
-    }
-    document.querySelectorAll('.dc-look').forEach(function(b){
-      b.addEventListener('click', function(e){ e.preventDefault(); open(b.dataset.look); });
-    });
-    close.addEventListener('click', hide);
-    document.getElementById('dcvPrev').addEventListener('click', function(e){ e.stopPropagation(); go(idx-1); });
-    document.getElementById('dcvNext').addEventListener('click', function(e){ e.stopPropagation(); go(idx+1); });
-    viewer.addEventListener('click', function(e){ if(e.target === viewer) hide(); });
-    document.addEventListener('keydown', function(e){
-      if(!viewer.classList.contains('on')) return;
-      if(e.key==='Escape') hide(); if(e.key==='ArrowLeft') go(idx-1); if(e.key==='ArrowRight') go(idx+1);
-    });
-    var x0 = null;
-    track.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
-    track.addEventListener('touchend', function(e){
-      if(x0===null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
-      if(Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1));
-    }, {passive:true});
-  }
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
-})();
-</script>
 
 
 <script>
@@ -5967,7 +5829,7 @@ function initPadrinos(){
 <script>
 /* ═════════ IDIOMA · Español / English ═════════ */
 (function(){
-  var EN = {"Bruno y Mafer": "Bruno and Mafer", "27 · Febrero · 2027": "February · 27 · 2027", "Abrir invitación": "Open invitation", "Menú": "Menu", "Nuestra historia": "Our story", "La celebración": "The celebration", "Itinerario": "Itinerary", "Familias": "Families", "Vestimenta": "Dress code", "Hospedaje": "Lodging", "Fotos": "Photos", "Mesa de regalos": "Gift registry", "Álbum": "Album", "Confirmar asistencia": "Confirm attendance", "Nos casamos": "We are getting married", "Sábado · 27 · Febrero · 2027": "Saturday · February · 27 · 2027", "Guadalajara · Jalisco": "Guadalajara · Jalisco", "Esta invitación es para": "This invitation is for", "Desliza": "Scroll", "Bruno & Mafer": "Bruno & Mafer", "Nuestra": "Our", "historia": "story", "Una de nuestras primeras sesiones juntos": "One of our first photo sessions together", "Con el amor que nos une, queremos compartir contigo el día en que uniremos nuestras vidas.": "With the love that unites us, we want to share with you the day we join our lives.", "Será un honor contar con tu presencia en este nuevo comienzo.": "It will be an honor to have you with us at this new beginning.", "El gran día llega en": "The big day arrives in", "Cuenta": "The", "regresiva": "countdown", "Días": "Days", "Horas": "Hours", "Minutos": "Minutes", "Segundos": "Seconds", "¿Dónde y cuándo?": "Where and when?", "La": "The", "celebración": "celebration", "Ceremonia civil y recepción": "Civil ceremony and reception", "Todo sera en el mismo lugar": "Everything will be at the same place", "Ver ubicación": "View location", "No lo olvides": "Do not forget", "Reserva la": "Save the", "fecha": "date", "Febrero": "February", "Agregar al calendario": "Add to calendar", "El día de la boda": "The wedding day", "Todo sera en el mismo lugar – La Macarena Salón Boutique": "Everything will be at the same place – La Macarena Salón Boutique", "Ceremonia Civil": "Civil Ceremony", "Coctel": "Cocktail", "Primer Baile": "First Dance", "Cena": "Dinner", "Party Time": "Party Time", "Fin": "End", "Con el amor": "With the love", "de nuestras": "of our", "familias": "families", "Padres de la novia": "Bride's parents", "Padres del novio": "Groom's parents", "Nuestros padrinos": "Our godparents", "Por confirmar": "To be confirmed", "Código de vestimenta": "Dress code", "Formal con tenis": "Formal with sneakers", "Caballeros": "Gentlemen", "Ver ideas": "See ideas", "Damas": "Ladies", "Colores a evitar": "Colors to avoid", "Blanco": "White", "Blanco hueso": "Off-white", "El blanco y sus tonos están reservados para la novia. ¡Gracias por tu comprensión!": "White and its shades are reserved for the bride. Thank you for understanding!", "Chaleco y pantalón de vestir": "Vest and dress trousers", "Traje en tono arena": "Sand-colored suit", "Traje oscuro": "Dark suit", "Vestido largo claro": "Light long dress", "Vestido marino": "Navy dress", "Vestido champagne": "Champagne dress", "Para tu estancia": "For your stay", "sugerido": "suggested", "Quédate cerca de la recepción": "Stay close to the reception", "Lista": "List", "Mapa": "Map", "Hotel": "Hotel", "en auto a la recepción": "by car to the reception", "Reservar": "Book", "Cómo llegar": "Directions", "Recepción": "Reception", "Cargando mapa…": "Loading map…", "Toca un número para ver el hotel": "Tap a number to see the hotel", "Usa dos dedos para mover el mapa": "Use two fingers to move the map", "No se pudo cargar el mapa": "The map could not be loaded", "Nosotros": "Us", "Nuestras fotos": "Our photos", "Desliza para ver más": "Swipe to see more", "Con cariño": "With love", "Mesa de": "Gift", "regalos": "registry", "Tu presencia es nuestro regalo": "Your presence is our gift", "Si deseas tener un detalle con nosotros, preparamos una mesa de regalos en Amazon y en Liverpool, y también contaremos con lluvia de sobres.": "If you wish to give us a gift, we have set up registries at Amazon and Liverpool, and we will also have an envelope shower.", "Mesa de regalos Amazon": "Amazon gift registry", "Mesa de regalos Liverpool": "Liverpool gift registry", "Ver mesa de regalos": "View gift registry", "Lluvia de sobres": "Envelope shower", "Si prefieres obsequiarnos en efectivo, contaremos con lluvia de sobres el día de nuestra boda.": "If you prefer to give us cash, we will have an envelope shower on our wedding day.", "Comparte tus momentos": "Share your moments", "Álbum de": "Photo", "fotos": "album", "Álbum de fotos": "Photo album", "Ayúdanos a guardar cada momento: sube aquí las fotos que tomes durante el evento.": "Help us keep every moment: upload the photos you take during the event here.", "Subir mis fotos": "Upload my photos", "El álbum de fotos se habilita el día del evento. Regresa aquí y sube todas tus fotos de la noche.": "The photo album opens on the day of the event. Come back here and upload all your photos from the night.", "Confirmación de asistencia": "RSVP", "¿Nos": "Will you", "acompañas?": "join us?", "Aviso especial": "Special notice", "Evento solo para": "Event for", "adultos": "adults only", "Con todo nuestro cariño hemos pensado esta celebración para adultos. Sabemos que amas a tus pequeños tanto como nosotros, y por eso te regalamos esta noche para disfrutarla con nosotros. Gracias por tu comprensión.": "With all our love we have planned this celebration for adults. We know you love your little ones as much as we do, so we are giving you this night to enjoy with us. Thank you for understanding.", "Tu presencia lo": "Your presence is", "es todo": "everything", "Confírmanos tu asistencia antes del": "Please confirm your attendance before", "8 de enero de 2027": "January 8, 2027", ". Nos hará muy felices saber que estarás con nosotros.": ". We will be so happy to know you will be with us.", "Pases asignados": "Assigned passes", "Sí asistiré": "I will attend", "No podré asistir": "I cannot attend", "Escribe el nombre completo de cada persona": "Write each person's full name", "Modificar mi respuesta": "Edit my response", "Este es tu pase": "This is your pass", "Preséntalo": "Present it", "El día del evento, en la recepción": "On the day of the event, at the reception", "No encontramos tu invitación. Pide a los novios que te envíen tu enlace de nuevo.": "We could not find your invitation. Ask the couple to send you your link again.", "Fecha límite · 8 de enero de 2027": "Deadline · January 8, 2027", "Notas importantes": "Important notes", "El día del evento presenta tu pase en la recepción. Te pedimos de la manera más atenta respetar el número de pases asignados en tu invitación: cada lugar fue reservado con mucho cariño.": "On the day of the event, show your pass at the reception. We kindly ask you to respect the number of passes assigned in your invitation: each seat was reserved with great care.", "En caso de no confirmar asistencia, comprenderemos que no podrás acompañarnos ese día.": "If you do not confirm, we will understand that you will not be able to join us that day.", "Actualizar respuesta": "Update response", "Enviando…": "Sending…", "Fecha límite alcanzada": "Deadline reached", "La fecha para confirmar asistencia ha pasado.": "The date to confirm attendance has passed.", "Para confirmar necesitas abrir el enlace personalizado que te enviamos. Ese enlace lleva tu nombre y tus pases.": "To confirm you need to open the personalized link we sent you. That link carries your name and your passes.", "Por favor indícanos si podrás acompañarnos.": "Please let us know if you will be able to join us.", "Por favor escribe al menos un nombre completo.": "Please write at least one full name.", "Escribe un solo nombre en cada campo. Si vienen más personas, sube el contador y escribe cada nombre en su propio campo.": "Write only one name in each field. If more people are coming, raise the counter and write each name in its own field.", "Sin conexión. Verifica tu internet e inténtalo de nuevo.": "No connection. Check your internet and try again.", "No pudimos identificar tu invitación. Abre el enlace personalizado que te enviamos; ese es el único que registra tu confirmación.": "We could not identify your invitation. Open the personalized link we sent you; it is the only one that records your confirmation.", "Esta invitación ya no está activa. Por favor contacta a los novios para que te envíen un enlace nuevo.": "This invitation is no longer active. Please contact the couple so they can send you a new link.", "Hubo un problema al enviar. Inténtalo de nuevo.": "There was a problem sending. Please try again.", "¡Gracias por confirmar!": "Thank you for confirming!", "Gracias por avisarnos": "Thank you for letting us know", "Lamentamos que no puedas acompañarnos. Te vamos a extrañar.": "We are sorry you cannot join us. We will miss you.", "Usarás todos tus pases": "You will use all your passes", "Tu nombre completo": "Your full name", "Momentos": "Moments", "Algunos de nuestros recuerdos juntos": "Some of our memories together", "Con amor, los novios": "With love, the couple", "Diseño por @elysium.invitaciones": "Design by @elysium.invitaciones", "Pausar música": "Pause music", "Reproducir música": "Play music", "Secciones de la invitación": "Invitation sections", "Cerrar menú": "Close menu", "Jardín de La Macarena Salón Boutique iluminado de noche": "La Macarena Salón Boutique garden lit up at night", "Calendario de febrero de 2027 con el sábado 27 marcado": "February 2027 calendar with Saturday 27 marked", "Ver ideas de vestimenta para caballeros": "See dress ideas for gentlemen", "Ver ideas de vestimenta para damas": "See dress ideas for ladies", "Ver hospedaje como lista o mapa": "View lodging as a list or a map", "Mapa del hotel y la recepción": "Map of the hotel and the reception", "Acercar": "Zoom in", "Alejar": "Zoom out", "Ver todo": "See all", "Cerrar": "Close", "Foto anterior": "Previous photo", "Foto siguiente": "Next photo", "Fotos de Bruno y Mafer": "Photos of Bruno and Mafer", "Beso al atardecer": "Kiss at sunset", "Abrazo en blanco y negro": "Black and white embrace", "Luz de atardecer junto al muro": "Sunset light by the wall", "Bruno y Mafer frente a frente": "Bruno and Mafer face to face", "Código QR del álbum de fotos": "Photo album QR code", "Quitar un pase": "Remove a pass", "Agregar un pase": "Add a pass", "Mafer y Bruno sentados sonriendo": "Mafer and Bruno sitting and smiling", "Frente al portón": "In front of the gate", "Ideas de vestimenta": "Dress ideas", "Anterior": "Previous", "Siguiente": "Next", "Bruno y Mafer caminando de la mano": "Bruno and Mafer walking hand in hand", "Idioma / Language": "Idioma / Language", "Recepción: La Macarena Salón Boutique": "Reception: La Macarena Salón Boutique", "Hotel 1: Candlewood Suites Guadalajara Galerias, an IHG Hotel": "Hotel 1: Candlewood Suites Guadalajara Galerias, an IHG Hotel", "Bruno & Mafer · 27 · Febrero · 2027": "Bruno & Mafer · February · 27 · 2027"};
+  var EN = {"Recuerdos": "Memories", "Tu presencia lo es todo": "Your presence is everything", "Evento solo para adultos": "Adults-only event", "¿Nos acompañas?": "Will you join us?", "Hospedaje sugerido": "Suggested lodging", "de nuestras familias": "of our families", "Reserva la fecha": "Save the date", "Cuenta regresiva": "Countdown", "Bruno y Mafer": "Bruno and Mafer", "27 · Febrero · 2027": "February · 27 · 2027", "Abrir invitación": "Open invitation", "Menú": "Menu", "Nuestra historia": "Our story", "La celebración": "The celebration", "Itinerario": "Itinerary", "Familias": "Families", "Vestimenta": "Dress code", "Hospedaje": "Lodging", "Fotos": "Photos", "Mesa de regalos": "Gift registry", "Álbum": "Album", "Confirmar asistencia": "Confirm attendance", "Nos casamos": "We are getting married", "Sábado · 27 · Febrero · 2027": "Saturday · February · 27 · 2027", "Guadalajara · Jalisco": "Guadalajara · Jalisco", "Esta invitación es para": "This invitation is for", "Desliza": "Scroll", "Bruno & Mafer": "Bruno & Mafer", "Nuestra": "Our", "historia": "story", "Una de nuestras primeras sesiones juntos": "One of our first photo sessions together", "Con el amor que nos une, queremos compartir contigo el día en que uniremos nuestras vidas.": "With the love that unites us, we want to share with you the day we join our lives.", "Será un honor contar con tu presencia en este nuevo comienzo.": "It will be an honor to have you with us at this new beginning.", "El gran día llega en": "The big day arrives in", "Cuenta": "The", "regresiva": "countdown", "Días": "Days", "Horas": "Hours", "Minutos": "Minutes", "Segundos": "Seconds", "¿Dónde y cuándo?": "Where and when?", "La": "The", "celebración": "celebration", "Ceremonia civil y recepción": "Civil ceremony and reception", "Todo sera en el mismo lugar": "Everything will be at the same place", "Ver ubicación": "View location", "No lo olvides": "Do not forget", "Reserva la": "Save the", "fecha": "date", "Febrero": "February", "Agregar al calendario": "Add to calendar", "El día de la boda": "The wedding day", "Todo sera en el mismo lugar – La Macarena Salón Boutique": "Everything will be at the same place – La Macarena Salón Boutique", "Ceremonia Civil": "Civil Ceremony", "Coctel": "Cocktail", "Primer Baile": "First Dance", "Cena": "Dinner", "Party Time": "Party Time", "Fin": "End", "Con el amor": "With the love", "de nuestras": "of our", "familias": "families", "Padres de la novia": "Bride's parents", "Padres del novio": "Groom's parents", "Nuestros padrinos": "Our godparents", "Por confirmar": "To be confirmed", "Código de vestimenta": "Dress code", "Formal con tenis": "Formal with sneakers", "Caballeros": "Gentlemen", "Ver ideas": "See ideas", "Damas": "Ladies", "Colores a evitar": "Colors to avoid", "Blanco": "White", "Blanco hueso": "Off-white", "El blanco y sus tonos están reservados para la novia. ¡Gracias por tu comprensión!": "White and its shades are reserved for the bride. Thank you for understanding!", "Chaleco y pantalón de vestir": "Vest and dress trousers", "Traje en tono arena": "Sand-colored suit", "Traje oscuro": "Dark suit", "Vestido largo claro": "Light long dress", "Vestido marino": "Navy dress", "Vestido champagne": "Champagne dress", "Para tu estancia": "For your stay", "sugerido": "suggested", "Quédate cerca de la recepción": "Stay close to the reception", "Lista": "List", "Mapa": "Map", "Hotel": "Hotel", "en auto a la recepción": "by car to the reception", "Reservar": "Book", "Cómo llegar": "Directions", "Recepción": "Reception", "Cargando mapa…": "Loading map…", "Toca un número para ver el hotel": "Tap a number to see the hotel", "Usa dos dedos para mover el mapa": "Use two fingers to move the map", "No se pudo cargar el mapa": "The map could not be loaded", "Nosotros": "Us", "Nuestras fotos": "Our photos", "Desliza para ver más": "Swipe to see more", "Con cariño": "With love", "Mesa de": "Gift", "regalos": "registry", "Tu presencia es nuestro regalo": "Your presence is our gift", "Si deseas tener un detalle con nosotros, preparamos una mesa de regalos en Amazon y en Liverpool, y también contaremos con lluvia de sobres.": "If you wish to give us a gift, we have set up registries at Amazon and Liverpool, and we will also have an envelope shower.", "Mesa de regalos Amazon": "Amazon gift registry", "Mesa de regalos Liverpool": "Liverpool gift registry", "Ver mesa de regalos": "View gift registry", "Lluvia de sobres": "Envelope shower", "Si prefieres obsequiarnos en efectivo, contaremos con lluvia de sobres el día de nuestra boda.": "If you prefer to give us cash, we will have an envelope shower on our wedding day.", "Comparte tus momentos": "Share your moments", "Álbum de": "Photo", "fotos": "album", "Álbum de fotos": "Photo album", "Ayúdanos a guardar cada momento: sube aquí las fotos que tomes durante el evento.": "Help us keep every moment: upload the photos you take during the event here.", "Subir mis fotos": "Upload my photos", "El álbum de fotos se habilita el día del evento. Regresa aquí y sube todas tus fotos de la noche.": "The photo album opens on the day of the event. Come back here and upload all your photos from the night.", "Confirmación de asistencia": "RSVP", "¿Nos": "Will you", "acompañas?": "join us?", "Aviso especial": "Special notice", "Evento solo para": "Event for", "adultos": "adults only", "Con todo nuestro cariño hemos pensado esta celebración para adultos. Sabemos que amas a tus pequeños tanto como nosotros, y por eso te regalamos esta noche para disfrutarla con nosotros. Gracias por tu comprensión.": "With all our love we have planned this celebration for adults. We know you love your little ones as much as we do, so we are giving you this night to enjoy with us. Thank you for understanding.", "Tu presencia lo": "Your presence is", "es todo": "everything", "Confírmanos tu asistencia antes del": "Please confirm your attendance before", "8 de enero de 2027": "January 8, 2027", ". Nos hará muy felices saber que estarás con nosotros.": ". We will be so happy to know you will be with us.", "Pases asignados": "Assigned passes", "Sí asistiré": "I will attend", "No podré asistir": "I cannot attend", "Escribe el nombre completo de cada persona": "Write each person's full name", "Modificar mi respuesta": "Edit my response", "Este es tu pase": "This is your pass", "Preséntalo": "Present it", "El día del evento, en la recepción": "On the day of the event, at the reception", "No encontramos tu invitación. Pide a los novios que te envíen tu enlace de nuevo.": "We could not find your invitation. Ask the couple to send you your link again.", "Fecha límite · 8 de enero de 2027": "Deadline · January 8, 2027", "Notas importantes": "Important notes", "El día del evento presenta tu pase en la recepción. Te pedimos de la manera más atenta respetar el número de pases asignados en tu invitación: cada lugar fue reservado con mucho cariño.": "On the day of the event, show your pass at the reception. We kindly ask you to respect the number of passes assigned in your invitation: each seat was reserved with great care.", "En caso de no confirmar asistencia, comprenderemos que no podrás acompañarnos ese día.": "If you do not confirm, we will understand that you will not be able to join us that day.", "Actualizar respuesta": "Update response", "Enviando…": "Sending…", "Fecha límite alcanzada": "Deadline reached", "La fecha para confirmar asistencia ha pasado.": "The date to confirm attendance has passed.", "Para confirmar necesitas abrir el enlace personalizado que te enviamos. Ese enlace lleva tu nombre y tus pases.": "To confirm you need to open the personalized link we sent you. That link carries your name and your passes.", "Por favor indícanos si podrás acompañarnos.": "Please let us know if you will be able to join us.", "Por favor escribe al menos un nombre completo.": "Please write at least one full name.", "Escribe un solo nombre en cada campo. Si vienen más personas, sube el contador y escribe cada nombre en su propio campo.": "Write only one name in each field. If more people are coming, raise the counter and write each name in its own field.", "Sin conexión. Verifica tu internet e inténtalo de nuevo.": "No connection. Check your internet and try again.", "No pudimos identificar tu invitación. Abre el enlace personalizado que te enviamos; ese es el único que registra tu confirmación.": "We could not identify your invitation. Open the personalized link we sent you; it is the only one that records your confirmation.", "Esta invitación ya no está activa. Por favor contacta a los novios para que te envíen un enlace nuevo.": "This invitation is no longer active. Please contact the couple so they can send you a new link.", "Hubo un problema al enviar. Inténtalo de nuevo.": "There was a problem sending. Please try again.", "¡Gracias por confirmar!": "Thank you for confirming!", "Gracias por avisarnos": "Thank you for letting us know", "Lamentamos que no puedas acompañarnos. Te vamos a extrañar.": "We are sorry you cannot join us. We will miss you.", "Usarás todos tus pases": "You will use all your passes", "Tu nombre completo": "Your full name", "Momentos": "Moments", "Algunos de nuestros recuerdos juntos": "Some of our memories together", "Con amor, los novios": "With love, the couple", "Diseño por @elysium.invitaciones": "Design by @elysium.invitaciones", "Pausar música": "Pause music", "Reproducir música": "Play music", "Secciones de la invitación": "Invitation sections", "Cerrar menú": "Close menu", "Jardín de La Macarena Salón Boutique iluminado de noche": "La Macarena Salón Boutique garden lit up at night", "Calendario de febrero de 2027 con el sábado 27 marcado": "February 2027 calendar with Saturday 27 marked", "Ver ideas de vestimenta para caballeros": "See dress ideas for gentlemen", "Ver ideas de vestimenta para damas": "See dress ideas for ladies", "Ver hospedaje como lista o mapa": "View lodging as a list or a map", "Mapa del hotel y la recepción": "Map of the hotel and the reception", "Acercar": "Zoom in", "Alejar": "Zoom out", "Ver todo": "See all", "Cerrar": "Close", "Foto anterior": "Previous photo", "Foto siguiente": "Next photo", "Fotos de Bruno y Mafer": "Photos of Bruno and Mafer", "Beso al atardecer": "Kiss at sunset", "Abrazo en blanco y negro": "Black and white embrace", "Luz de atardecer junto al muro": "Sunset light by the wall", "Bruno y Mafer frente a frente": "Bruno and Mafer face to face", "Código QR del álbum de fotos": "Photo album QR code", "Quitar un pase": "Remove a pass", "Agregar un pase": "Add a pass", "Mafer y Bruno sentados sonriendo": "Mafer and Bruno sitting and smiling", "Frente al portón": "In front of the gate", "Ideas de vestimenta": "Dress ideas", "Anterior": "Previous", "Siguiente": "Next", "Bruno y Mafer caminando de la mano": "Bruno and Mafer walking hand in hand", "Idioma / Language": "Idioma / Language", "Recepción: La Macarena Salón Boutique": "Reception: La Macarena Salón Boutique", "Hotel 1: Candlewood Suites Guadalajara Galerias, an IHG Hotel": "Hotel 1: Candlewood Suites Guadalajara Galerias, an IHG Hotel", "Bruno & Mafer · 27 · Febrero · 2027": "Bruno & Mafer · February · 27 · 2027"};
   var RX = [
     [/^Tienes (\d+) pases reservados\. Aumenta el número de pases que vayas a ocupar\.$/, 'You have $1 passes reserved. Raise the number of passes you will use.'],
     [/^(\d+) de (\d+) pases$/, '$1 of $2 passes'],
@@ -6069,6 +5931,20 @@ function initPadrinos(){
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
   window.__elyLang = function(){ return lang; };
+})();
+</script>
+
+<script>
+/* Fotos: fundido al entrar (nunca se quedan ocultas) */
+(function(){
+  var els = document.querySelectorAll('#fotos .fs-slide img, #recuerdos .mo-it img, #storyPhoto img');
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 200px -8% 200px'});
+  els.forEach(function(el){
+    var r = el.getBoundingClientRect();
+    if(r.top > innerHeight){ el.classList.add('js-fade'); io.observe(el); }
+  });
+  setTimeout(function(){ els.forEach(function(el){ el.classList.add('in'); }); }, 15000);
 })();
 </script>
 </body>
